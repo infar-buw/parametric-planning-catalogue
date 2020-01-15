@@ -7,7 +7,6 @@ nav_order: 1
 # Boundary
 
 | ![](../../../img/boundary-1.png) | ![](../../../img/boundary-2.png) |
-|-|-|
 
 Creates a context-aware boundary of predefined size.
 

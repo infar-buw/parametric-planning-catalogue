@@ -7,7 +7,6 @@ nav_order: 1
 # Force-based Distribution
 
 | ![](../../../img/force-based-distribution-1.png) | ![](../../../img/force-based-distribution-2.png) |
-|-|-|
 
 Physics engines allow to assign forces to elements like points and simulate their behaviour. Spring forces can try to pull and contract points until they keep a predefined distance to each other and reach an equilibrium state. The springs can represent spatial relations between points and assist in distributing them.
 
