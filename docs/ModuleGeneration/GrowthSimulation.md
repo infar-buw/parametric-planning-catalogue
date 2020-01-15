@@ -6,7 +6,7 @@ nav_order: 1
 ---
 # Growth Simulation 
 
-| ![](../img/growth-simulation-1.png) | ![](../img/growth-simulation-2.png) | ![](../img/growth-simulation-3.png) |
+| ![](../../../img/growth-simulation-1.png) | ![](../../../img/growth-simulation-2.png) | ![](../../../img/growth-simulation-3.png) |
 |-|-|-|
 
 Growing cities demand new land. Similar like trees thriving to acquire as much sunlit surface by evaluating their environment for bright areas, cities evaluate their surroundings by ecologic, economic and social aspects to allocate different functions at suitable positions.

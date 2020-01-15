@@ -6,7 +6,7 @@ nav_order: 1
 ---
 # Flowlines
 
-![](../img/flowlines-1.png)
+![](../../../img/flowlines-1.png)
 
 When water runs down a hill it is pulled by gravity leading it the fastest and easiest way downwards, mainly the steepest path. This principle can be translated to other topics such as walking paths.
 Starting from the highest point, flowlines to all other points can be traced following the easiest path.

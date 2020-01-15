@@ -6,7 +6,7 @@ nav_order: 1
 ---
 # Quadrangulation
 
-![](../img/quadrangulation-1.png)
+![](../../../img/quadrangulation-1.png)
 
 A distribution of points can be connected through quadrangulation, meaning four points are always connected by lines with no other line between them. This results in a pattern of quads, that could suit i.e. as blocks.
 

@@ -6,7 +6,7 @@ nav_order: 1
 ---
 # Line Segment Network Generator
 
-![](../img/line-segment-network-generator-1.png)
+![](../../../img/line-segment-network-generator-1.png)
 
 Generates variations of line networks based on existing lines, limiting parameters and a random factor.
 

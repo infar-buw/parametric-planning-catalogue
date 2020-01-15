@@ -6,7 +6,7 @@ nav_order: 1
 ---
 # Shortest Path
 
-| ![](../img/shortest-path-1.png) | ![](../img/shortest-path-2.png) |
+| ![](../../../img/shortest-path-1.png) | ![](../../../img/shortest-path-2.png) |
 |-|-|
 
 Creates shortest path between two points.

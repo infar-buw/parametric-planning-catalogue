@@ -6,7 +6,7 @@ nav_order: 1
 ---
 # Evaluation Score
 
-![](../img/scoring-1.png)
+![](../../../img/scoring-1.png)
 
 Places have values. Values such as temperature, noise, illumination, density, closeness to water or parks can be calculated or measured rather easily. But property evaluation, comfort or cultural value are more difficult to define, since they differ by subject. By evaluating and giving places a score, a map of these scores can be created.
 

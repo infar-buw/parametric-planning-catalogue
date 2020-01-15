@@ -6,7 +6,7 @@ nav_order: 1
 ---
 # Slicing Tree
 
-![](../img/slicing-tree-1.png)
+![](../../../img/slicing-tree-1.png)
 
 Subdivides boundary polygons in tree like structure. Useful to create orthogonal parcels on a street blocks.
 

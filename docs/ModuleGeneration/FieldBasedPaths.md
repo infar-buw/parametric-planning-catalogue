@@ -6,7 +6,7 @@ nav_order: 1
 ---
 # Field-based Paths
 
-|![](../img/field-based-paths-1.png) | ![](../img/field-based-paths-2.png) | ![](../img/field-based-paths-3.png) |
+|![](../../../img/field-based-paths-1.png) | ![](../../../img/field-based-paths-2.png) | ![](../../../img/field-based-paths-3.png) |
 |-|-|-|
 
 Paths grow in the direction of an underlying vector field similar to a magnetic field. The resulting paths are not always straight and more comparable to naturally grown streets.

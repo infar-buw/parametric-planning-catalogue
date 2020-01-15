@@ -6,7 +6,7 @@ nav_order: 1
 ---
 # Line Segment Network Analysis
 
-![](../img/line-segment-network-analysis-1.png)
+![](../../../img/line-segment-network-analysis-1.png)
 
 
 This module is mainly used for street analysis, since streets can be divided into line segments. They serve as the main connection between places of cities. Some emerged from natural movement patterns, others are imposed constructions such as the Manhattan grid. Similar to human relations, where some persons have more contacts than others, street segments are differently integrated in the street system. They can be analysed through network theories such as i.e. Space Syntax. The more connections a street segment has the higher the chances for more activities on it, since more people might take this path. With different analysis settings it is possible to recognise main transportation arteries, public meeting points or remote areas.

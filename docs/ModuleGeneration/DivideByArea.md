@@ -6,7 +6,7 @@ nav_order: 1
 ---
 # Divide By Area
 
-![](../img/divide-by-area-1.png)
+![](../../../img/divide-by-area-1.png)
 
 Divides a polygon in predefined areas. Useful to create parcels of specific area on a street blocks.
 

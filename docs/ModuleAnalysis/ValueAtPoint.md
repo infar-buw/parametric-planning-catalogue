@@ -6,7 +6,7 @@ nav_order: 1
 ---
 # Value At Point
 
-![](../img/value-at-point-1.png)
+![](../../../img/value-at-point-1.png)
 
 Evaluates an object such as bitmap or mesh at a specific point for a specific value.
 
