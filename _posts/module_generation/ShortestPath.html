@@ -1,0 +1,21 @@
+<h1>Shortest Path</h1>
+
+<p>| <img src="../img/shortest-path-1.png" alt="" /> | <img src="../img/shortest-path-2.png" alt="" /> |
+|-|-|</p>
+
+<p>Creates shortest path between two points.</p>
+
+<h2>Setup</h2>
+
+<p>Calculates shortest path with the help of <a href="">Line Segment Network Analysis</a>. However, street network analysis needs an existing street network. Since this module wants to generate shortest path, it cannot use the existing street network. Therefore, it generates artificially an underlying grid of lines and chooses the most suitable lines from origin to destination.</p>
+
+<h2>Application</h2>
+
+<p>By introducing weights such as the slope of the terrain, the taken path can be constrained so that it does not follow steep paths and still tries to find the most suitable path. It can lead to serpentine like paths.</p>
+
+<h2>Limitations</h2>
+
+<ul>
+<li><p>Underlying artificial grid restricts calculation time and options.</p></li>
+<li><p>Shortest path might intersect with existing street network.</p></li>
+</ul>

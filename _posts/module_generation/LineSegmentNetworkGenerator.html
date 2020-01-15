@@ -1,0 +1,29 @@
+<h1>Line Segment Network Generator</h1>
+
+<p><img src="../img/line-segment-network-generator-1.png" alt="" /></p>
+
+<p>Generates variations of line networks based on existing lines, limiting parameters and a random factor.</p>
+
+<h2>Setup</h2>
+
+<ul>
+<li><p><strong>Existing lines</strong></p>
+
+<p>A boundary polygon defines, in which area the network will be generated. Initial lines can be supplied and the algorithm grows new lines from or to them.</p></li>
+<li><p><strong>Limiting parameters</strong></p>
+
+<p>The generation can be controlled by limiting minimum and maximum length as well as the angle in which lines grow. The number of iterations in which new lines are added can be controlled, too. Furthermore topographic data can inform the growth direction.</p></li>
+<li><p><strong>Random factor</strong></p>
+
+<p>Each time a different random number is supplied, the algorithm produces a different result. This process can be automatised to create a huge range of different results.</p></li>
+</ul>
+
+<h2>Application</h2>
+
+<p>A common purpose of creating a line network is the generation of street networks. In connection with <a href="../module_analysis/LineSegmentNetworkAnalysis.md">Line Segment Network Analysis</a> the performance of the network can be evaluated and by iterating through a range of network variants their performance can be compared.</p>
+
+<h2>Limitations</h2>
+
+<ul>
+<li>Random factor reduces control.</li>
+</ul>
