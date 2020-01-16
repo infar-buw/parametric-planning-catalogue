@@ -1,29 +1,24 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
-
 {% if page.images %}
-            <ul>
-              {% for image in page.images %}
-                    <li>
-                    <img src="{{ site.url }}{{ site.baseurl }}/img/{{ image }}" />
-                    </li>
-              {% endfor %}
-            </ul>
+    {% include image_carousel.html images=page.images count="3" id="imagecarousel" %}
 {% endif %}
 
-{{ content }}
+<h1>{{ page.title }}</h1>
 
 {% if page.using %}
     {% assign related_pages = site.pages | where_exp: "item", "page.using contains item.id" %}
     <hr>
     <h2 class="text-delta">Can use</h2>
-    {% include carousel.html pages=related_pages count="3" id="carouseluse" %}
+    {% include page_carousel.html pages=related_pages count="4" id="pagecarouseluse" %}
 {% endif %}
 {% assign related_pages = site.pages | where_exp: "item", "item.using contains page.id" %}
 {% if related_pages %}
     <hr>
     <h2 class="text-delta">Used by</h2>
-    {% include carousel.html pages=related_pages count="3" id="carouselusedby" %}
+    {% include page_carousel.html pages=related_pages count="4" id="pagecarouselusedby" %}
 {% endif %}
+
+{{ content }}
+
