@@ -32,8 +32,8 @@
             {% assign offset = forloop.index0 | times: include.count %}
             <li class="carousel__slide">
                 <div class="card-deck">
-                    {%for currentpage in include.pages offset: offset limit: include.count %}
-                        {% include card.html title=currentpage.title url=currentpage.url image=currentpage.image[0]  %}
+                    {%for p in include.pages offset: offset limit: include.count %}
+                        {% include card.html title=p.title url=p.url image=p.image[0]  %}
                     {% endfor %}
                 </div>
             </li>
