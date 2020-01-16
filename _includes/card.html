@@ -1,4 +1,5 @@
 <div class="card">
+    {% if include.url %}
     {% if include.image %}
     <a href="{{ include.url | absolute_url }}">
         <img src="{{ site.url }}{{ site.baseurl }}/img/{{ include.image[0] }}" class="card-img-top" alt="{{ include.title }}" />
@@ -10,5 +11,6 @@
             <p class="card-text">{{ include.text }}</p>
         {% endif %}
         <a href="{{ include.url | absolute_url }}" class="btn btn-primary">Show</a>
+    {% endif %}
     </div>
 </div>

@@ -4,14 +4,15 @@
 {% if include.id %}
     {% assign id = include.id %}
 {% endif %}
-{{ loops }}-{{ include.pages | size }}-{{ include.count }}
-<div id="{{ id }}" class="carousel slide" data-ride="carousel">
+<div id="{{ id }}" class="carousel slide" data-ride="carousel" data-interval="false">
     <div class="carousel-inner">
         {% for i in (1..loops) %}
         {% assign offset = forloop.index0 | times: include.count %}
         <div class="carousel-item {% if forloop.first %}active{% endif %}">
             <div class="card-deck">
-            {%for p in include.pages offset: offset limit: include.count %}
+            {% assign limit = offset | plus: include.count | minus: 1 %}
+            {% for j in (offset..limit)}
+                {% assign p = include.pages[j] %}
                 {% include card.html title=p.title url=p.url image=p.images  %}
             {% endfor %}
             </div>
