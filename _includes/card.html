@@ -1,0 +1,12 @@
+<div class="card">
+    <a href="{{ include.url | absolute_url }}">
+        <img src="{{ site.url }}{{ site.baseurl }}/img/{{ include.image }}" class="card-img-top" alt="{{ include.title }}" />
+    </a>
+    <div class="card-body">
+        <h4 class="card-title">{{ include.title }}</h4>
+        {% if include.text != nil %}
+            <p class="card-text">{{ include.text }}</p>
+        {% endif %}
+    </div>
+    <a href="{{ include.url | absolute_url }}" class="btn">Show</a>
+</div>
