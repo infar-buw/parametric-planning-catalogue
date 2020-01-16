@@ -137,3 +137,9 @@ $btn-primary-color: $primary;
 //lg: $content-width + $nav-width,
 //xl: 1400px
 //);
+.card-img-top-carousel {
+    height:50%; 
+    width:100%;
+    overflow:hidden;
+    background-color:$primary;
+}

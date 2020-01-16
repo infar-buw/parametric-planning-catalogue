@@ -1,10 +1,10 @@
 <div class="card">
     {% if include.url %}
-    {% if include.image %}
-    <a href="{{ include.url | absolute_url }}"  style="height:50%; width:100%;overflow:hidden;">
+    <a href="{{ include.url | absolute_url }}" class="card-img-top-carousel">
+        {% if include.image %}
         <img src="{{ site.url }}{{ site.baseurl }}/img/{{ include.image[0] }}" class="img-fluid card-img-top" alt="{{ include.title }}" />
+        {% endif %}
     </a>
-    {% endif %}
     <div class="card-body">
         <h4 class="card-title">{{ include.title }}</h4>
         {% if include.text != nil %}
