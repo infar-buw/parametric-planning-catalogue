@@ -1,12 +1,14 @@
 {% assign letterstring = "a,b,c,d,e,f,g,h,i,j,k,l,m,n" %}
 {% assign letters = letterstring | split: ',' %}
+{% assign loops = include.images | size %}
+
 
 <div class="carousel__holder">
     <div class="carousel">
-        {% for item in include.images %}
+        {% for i in (1..loops) %}
           <input class="carousel__activator" type="radio" name="carousel" id="{{ letters[forloop.index0] }}" {% if forloop.first %}checked="checked"{% endif %} />
         {% endfor %}
-        {% for item in include.images %}
+        {% for i in (1..loops) %}
           {% if forloop.index == forloop.length %}
             {% assign nextindex = 0 %}
           {% else %}
@@ -26,13 +28,16 @@
         {% endfor %}
         <div class="carousel__track">
           <ul>
-            {% for item in include.images %}
-            <li class="carousel__slide" style="background-image: url('{{ item }}');"></li>
+            {% for  i in (1..loops) %}
+            {% assign offset = forloop.index0 | times: include.count }
+            <li class="carousel__slide">
+
+            </li>
             {% endfor %}
           </ul>
         </div>
         <div class="carousel__indicators">
-            {% for item in include.images %}
+            {% for i in (1..loops) %}
               <label class="carousel__indicator" for="{{ letters[forloop.index0] }}"></label>
             {% endfor %}
         </div>
@@ -53,7 +58,7 @@
 .carousel__activator {
   display: none;
 }
-{% for item in include.images %}
+{% for i in (1..loops) %}
 .carousel__activator:nth-of-type({{ forloop.index }}):checked ~ .carousel__track {
   -webkit-transform: translateX(-{{ forloop.index0 }}00%);
           transform: translateX(-{{ forloop.index0 }}00%);
@@ -145,7 +150,7 @@
   right: 0;
   opacity: 1;
 }
-{% for item in include.images %}
+{% for i in (1..loops) %}
 .carousel__track .carousel__slide:nth-of-type({{ forloop.index }}) {
   -webkit-transform: translateX({{ forloop.index0 }}00%);
           transform: translateX({{ forloop.index0 }}00%);
@@ -170,7 +175,7 @@
 .carousel__indicator {
   background-color: #fafafa;
 }
-{% for item in include.images %}
+{% for i in (1..loops) %}
 .carousel__slide:nth-of-type({{ forloop.index }}),
 .carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type({{ forloop.index }}) {
   background-size: cover;
