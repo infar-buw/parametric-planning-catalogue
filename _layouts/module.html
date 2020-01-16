@@ -3,3 +3,18 @@ layout: default
 ---
 
 {{ content }}
+
+{% if page.using %}
+            <hr>
+            <h2 class="text-delta">Table of contents</h2>
+            {% assign related_pages = site.pages | sort:"nav_order" %}
+            <ul>
+              {% for rel_page in related_pages %}
+                    {% if page.using contains rel_page.id %}
+                    <li>
+                    <a href="{{ rel_page.url | absolute_url }}">{{ rel_page.title }}</a>{% if rel_page.summary %} - {{ rel_page.summary }}{% endif %}
+                    </li>
+                    {% endif %}
+              {% endfor %}
+            </ul>
+          {% endif %}
