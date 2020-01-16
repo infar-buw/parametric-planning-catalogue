@@ -11,7 +11,8 @@
         <div class="carousel-item {% if forloop.first %}active{% endif %}">
             <div class="card-deck">
             {% assign limit = offset | plus: include.count | minus: 1 %}
-            {% for j in (offset..limit)}
+            
+            {% for j in (offset..limit) %}
                 {% assign p = include.pages[j] %}
                 {% include card.html title=p.title url=p.url image=p.images  %}
             {% endfor %}
