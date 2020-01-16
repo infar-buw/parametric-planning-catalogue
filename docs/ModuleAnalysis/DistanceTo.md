@@ -4,13 +4,9 @@ title: Distance To
 parent: Analysis Modules
 id: m-a-001
 using: [m-a-002, m-a-003]
+images: [distance-to-1.png, distance-to-2.png]
 nav_order: 1
 ---
-
-# Distance To
-
-|![](../../../img/distance-to-1.png) | ![](../../../img/distance-to-2.png)|
-
 
 Calculates direct distance between objects.
 

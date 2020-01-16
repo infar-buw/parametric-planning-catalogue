@@ -3,11 +3,9 @@ layout: module
 title: Filtering
 parent: Analysis Modules
 id: m-a-003
+images: [filtering-1.png, filtering-2.png]
 nav_order: 1
 ---
-# Filtering
-
-| ![](../../../img/filtering-1.png) | ![](../../../img/filtering-2.png) |
 
 Sometimes it is necessary to filter a dataset for a range of values.
 
