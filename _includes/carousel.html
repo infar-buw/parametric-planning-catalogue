@@ -33,7 +33,11 @@
             <li class="carousel__slide">
                 <div class="card-deck">
                     {%for currentpage in include.pages offset: offset limit: include.count %}
-                        {% include card.html title=currentpage.title url=currentpage.url image=currentpage.image[0]  %}
+                        {% if currentpage.image %}
+                            {% include card.html title=currentpage.title url=currentpage.url image=currentpage.image[0]  %}
+                        {% elseif %}
+                            {% include card.html title=currentpage.title url=currentpage.url  %}
+                        {% endif %}
                     {% endfor %}
                 </div>
             </li>
