@@ -19,7 +19,17 @@ layout: default
 {% if page.using %}
             <hr>
             <h2 class="text-delta">Related Modules</h2>
-            {% assign possible_related_pages = site.pages | sort:"nav_order" %}
             {% assign related_pages = site.pages | where_exp: "item", "page.using contains item.id" %}
             {% include carousel.html height="50" unit="%" duration="7" images=related_pages count="2" %}
+
+            <ul>
+              {% for rel_page in related_pages %}
+                    <li>
+                        {% if rel_page.images %}
+                        <img src="{{ site.url }}{{ site.baseurl }}/img/{{ rel_page.images[0] }}" />
+                    {% endif %}
+                    <a href="{{ rel_page.url | absolute_url }}">{{ rel_page.title }}</a>{% if rel_page.summary %} - {{ rel_page.summary }}{% endif %}
+                    </li>
+              {% endfor %}
+            </ul>
 {% endif %}
