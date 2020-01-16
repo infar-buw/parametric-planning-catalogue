@@ -1,14 +1,12 @@
 {% assign letterstring = "a,b,c,d,e,f,g,h,i,j,k,l,m,n" %}
 {% assign letters = letterstring | split: ',' %}
-{% assign loops = include.images | size %}
-
 
 <div class="carousel__holder">
     <div class="carousel">
-        {% for i in (1..loops) %}
+        {% for item in site.data.carousel.images %}
           <input class="carousel__activator" type="radio" name="carousel" id="{{ letters[forloop.index0] }}" {% if forloop.first %}checked="checked"{% endif %} />
         {% endfor %}
-        {% for i in (1..loops) %}
+        {% for item in site.data.carousel.images %}
           {% if forloop.index == forloop.length %}
             {% assign nextindex = 0 %}
           {% else %}
@@ -28,18 +26,13 @@
         {% endfor %}
         <div class="carousel__track">
           <ul>
-            {% for  i in (1..loops) %}
-            {% assign offset = forloop.index0 | times: include.count }
-            <li class="carousel__slide">
-                {%for image in include.images offset: offset limit: include.count }
-                  <img src="{{ site.url }}{{ site.baseurl }}/img/{{ image }}" />
-                {% endfor %}
-            </li>
+            {% for item in site.data.carousel.images %}
+            <li class="carousel__slide" style="background-image: url('{{ item.image }}');"></li>
             {% endfor %}
           </ul>
         </div>
         <div class="carousel__indicators">
-            {% for i in (1..loops) %}
+            {% for item in site.data.carousel.images %}
               <label class="carousel__indicator" for="{{ letters[forloop.index0] }}"></label>
             {% endfor %}
         </div>
@@ -60,7 +53,7 @@
 .carousel__activator {
   display: none;
 }
-{% for i in (1..loops) %}
+{% for item in site.data.carousel.images %}
 .carousel__activator:nth-of-type({{ forloop.index }}):checked ~ .carousel__track {
   -webkit-transform: translateX(-{{ forloop.index0 }}00%);
           transform: translateX(-{{ forloop.index0 }}00%);
@@ -152,7 +145,7 @@
   right: 0;
   opacity: 1;
 }
-{% for i in (1..loops) %}
+{% for item in site.data.carousel.images %}
 .carousel__track .carousel__slide:nth-of-type({{ forloop.index }}) {
   -webkit-transform: translateX({{ forloop.index0 }}00%);
           transform: translateX({{ forloop.index0 }}00%);
@@ -177,7 +170,7 @@
 .carousel__indicator {
   background-color: #fafafa;
 }
-{% for i in (1..loops) %}
+{% for item in site.data.carousel.images %}
 .carousel__slide:nth-of-type({{ forloop.index }}),
 .carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type({{ forloop.index }}) {
   background-size: cover;
