@@ -13,13 +13,17 @@ layout: default
             </ul>
 {% endif %}
 
-
 {{ content }}
 
 {% if page.using %}
-            <hr>
-            <h2 class="text-delta">Related Modules</h2>
-            {% assign related_pages = site.pages | where_exp: "item", "page.using contains item.id" %}
-            {% include carousel.html height="50" unit="%" duration="7" pages=related_pages count="2" %}
-
+    {% assign related_pages = site.pages | where_exp: "item", "page.using contains item.id" %}
+    <hr>
+    <h2 class="text-delta">Can use</h2>
+    {% include carousel.html pages=related_pages count="2" id="carouseluse" %}
+{% endif %}
+{% assign related_pages = site.pages | where_exp: "item", "item.using contains page.id" %}
+{% if related_pages %}
+    <hr>
+    <h2 class="text-delta">Used by</h2>
+    {% include carousel.html pages=related_pages count="2" id="carouselusedby" %}
 {% endif %}

@@ -3,7 +3,7 @@ layout: module
 title: Distance To
 parent: Analysis Modules
 id: m-a-001
-using: [m-a-002, m-a-003]
+using: [m-a-002, m-a-003, m-a-004, m-a-005]
 images: [distance-to-1.png, distance-to-2.png]
 nav_order: 1
 ---
