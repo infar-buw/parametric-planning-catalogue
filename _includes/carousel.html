@@ -29,9 +29,11 @@
         <div class="carousel__track">
           <ul>
             {% for  i in (1..loops) %}
-            {% assign offset = forloop.index0 | times: include.count }
+            {% assign offset = forloop.index0 | times: include.count %}
             <li class="carousel__slide">
-
+                {%for image in include.images offset: offset limit: include.count %}
+                  <img src="{{ site.url }}{{ site.baseurl }}/img/{{ image }}" />
+                {% endfor %}
             </li>
             {% endfor %}
           </ul>
