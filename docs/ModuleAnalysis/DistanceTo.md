@@ -4,7 +4,7 @@ title: Distance To
 parent: Analysis Modules
 id: m-a-001
 using: [m-a-002, m-a-003]
-images: [distance-to-1.png, distance-to-2.png]
+images: [distance-to-1.png, distance-to-2.png, boundary-1.png, boundary2-png, filtering-1.png, filtering-2.png]
 nav_order: 1
 ---
 
