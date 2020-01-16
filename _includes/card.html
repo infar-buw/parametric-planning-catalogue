@@ -9,6 +9,6 @@
         {% if include.text != nil %}
             <p class="card-text">{{ include.text }}</p>
         {% endif %}
+        <a href="{{ include.url | absolute_url }}" class="btn btn-primary">Show</a>
     </div>
-    <a href="{{ include.url | absolute_url }}" class="btn">Show</a>
 </div>

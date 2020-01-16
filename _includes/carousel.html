@@ -1,6 +1,6 @@
 {% assign letterstring = "a,b,c,d,e,f,g,h,i,j,k,l,m,n" %}
 {% assign letters = letterstring | split: ',' %}
-{% assign loops = include.pages | size | divice_by: include.count | floor | plus: 1 %}
+{% assign loops = include.pages | size | divice_by: include.count | ceil %}
 
 
 <div class="carousel__holder">
