@@ -33,7 +33,7 @@
             <li class="carousel__slide">
                 <div class="card-deck">
                     {%for p in include.pages offset: offset limit: include.count %}
-                        {% include card.html title=p.title url=p.url image=p.image[0]  %}
+                        {% include card.html title=p.title url=p.url   %}
                     {% endfor %}
                 </div>
             </li>
