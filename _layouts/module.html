@@ -13,6 +13,9 @@ layout: default
             </ul>
 {% endif %}
 
+
+{% include carousel.html height="50" unit="%" duration="7" images=page.images count="3" %}
+
 {{ content }}
 
 {% if page.using %}
@@ -24,7 +27,7 @@ layout: default
                     {% if page.using contains rel_page.id %}
                     <li>
                         {% if rel_page.images %}
-                        <img src="{{ site.url }}{{ site.baseurl }}/img/{{ rel_pages.images[0] }}" />
+                        <img src="{{ site.url }}{{ site.baseurl }}/img/{{ rel_page.images[0] }}" />
                     {% endif %}
                     <a href="{{ rel_page.url | absolute_url }}">{{ rel_page.title }}</a>{% if rel_page.summary %} - {{ rel_page.summary }}{% endif %}
                     </li>
