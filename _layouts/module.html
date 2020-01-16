@@ -1,14 +1,13 @@
 ---
 layout: default
 ---
-{{ assign image_path =  site.url | append: site.baseurl | append: '/img/'}}
 <h1>{{ page.title }}</h1>
 
 {% if page.images %}
             <ul>
               {% for image in page.images %}
                     <li>
-                    <img src="{{ image_path | append: image}}" />
+                    <img src="{{ site.url }}{{ site.baseurl }}/img/{{ image }}" />
                     </li>
               {% endfor %}
             </ul>
@@ -25,7 +24,7 @@ layout: default
                     {% if page.using contains rel_page.id %}
                     <li>
                         {% if rel_page.images %}
-                            <img src="{{ image_path | append: rel_page.images[0]}}" />
+                        <img src="{{ site.url }}{{ site.baseurl }}/img/{{ rel_pages.images[0] }}" />
                     {% endif %}
                     <a href="{{ rel_page.url | absolute_url }}">{{ rel_page.title }}</a>{% if rel_page.summary %} - {{ rel_page.summary }}{% endif %}
                     </li>
