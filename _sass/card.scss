@@ -75,12 +75,12 @@
   
   .card-img,
   .card-img-top {
-    @include border-top-radius($card-inner-border-radius);
+    @include border-top-radius($border-radius);
   }
   
   .card-img,
   .card-img-bottom {
-    @include border-bottom-radius($card-inner-border-radius);
+    @include border-bottom-radius($border-radius);
   }
   
   
