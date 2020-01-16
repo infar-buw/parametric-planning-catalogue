@@ -19,11 +19,11 @@ layout: default
     {% assign related_pages = site.pages | where_exp: "item", "page.using contains item.id" %}
     <hr>
     <h2 class="text-delta">Can use</h2>
-    {% include carousel.html pages=related_pages count="2" id="carouseluse" %}
+    {% include carousel.html pages=related_pages count="3" id="carouseluse" %}
 {% endif %}
 {% assign related_pages = site.pages | where_exp: "item", "item.using contains page.id" %}
 {% if related_pages %}
     <hr>
     <h2 class="text-delta">Used by</h2>
-    {% include carousel.html pages=related_pages count="2" id="carouselusedby" %}
+    {% include carousel.html pages=related_pages count="3" id="carouselusedby" %}
 {% endif %}
