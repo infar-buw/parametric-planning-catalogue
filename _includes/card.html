@@ -1,7 +1,9 @@
 <div class="card">
+    {% if include.image %}
     <a href="{{ include.url | absolute_url }}">
         <img src="{{ site.url }}{{ site.baseurl }}/img/{{ include.image }}" class="card-img-top" alt="{{ include.title }}" />
     </a>
+    {% endif %}
     <div class="card-body">
         <h4 class="card-title">{{ include.title }}</h4>
         {% if include.text != nil %}
