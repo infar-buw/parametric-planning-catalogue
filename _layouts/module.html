@@ -19,8 +19,7 @@ layout: default
 {% if page.using %}
             <hr>
             <h2 class="text-delta">Related Modules</h2>
-            {% assign related_pages = site.pages | where_exp: "item", "page.using contains item.id" %}
-
+            {% assign related_pages = site.pages | where_exp:"item", "page.using contains item.id" %}
             <ul>
               {% for rel_page in related_pages %}
                     <li>
