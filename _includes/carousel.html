@@ -3,7 +3,7 @@
 {% if include.id %}
     {% assign id = include.id %}
 {% endif %}
-
+{{ loops }}-{{ include.pages | size }}-{{ include.count }}
 <div id="{{ id }}" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
         {% for i in (1..loops) %}
