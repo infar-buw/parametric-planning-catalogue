@@ -1,5 +1,5 @@
 {% assign count = include.count | times: 1.0 %}
-{% assign loops = include.images | size | divided_by: include.count | ceil %}
+{% assign loops = include.images | size | divided_by: count | ceil %}
 {% assign id = carousel %}
 {% if include.id %}
     {% assign id = include.id %}
