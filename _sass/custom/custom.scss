@@ -52,18 +52,21 @@
 //$red-300: #dd2e2e;
 
 $in3-primary: #FD8852;
-$in3-secondary: #56BFC3;
-$in3-tertiary: #162D3C;
-$in3-tertiary-light: #162D3C22;
+//$in3-secondary: #56BFC3;
+$in3-secondary: #162D3C;
+$in3-secondary-light: #162D3C22;
+
+$primary:       $in3-primary !default;
+$secondary:     $in3-secondary !default;
 
 //$body-background-color: $white;
-$sidebar-color: $in3-tertiary-light;//$grey-lt-000;
+$sidebar-color: $in3-secondary-light;//$grey-lt-000;
 //$search-background-color: $white;
 //$table-background-color: $white;
 //$code-background-color: $grey-lt-000;
 
 //$body-text-color: $grey-dk-100;
-$body-heading-color: $in3-tertiary;//$grey-dk-300;
+$body-heading-color: $in3-secondary;//$grey-dk-300;
 //$search-result-preview-color: $grey-dk-000;
 $nav-child-link-color: $in3-secondary;// $grey-dk-100;
 $link-color: $in3-primary;

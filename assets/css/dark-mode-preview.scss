@@ -32,13 +32,13 @@ $logo: "{{ site.logo | absolute_url }}";
 @import "./content";
 @import "./navigation";
 @import "./typography";
+@import "./bootstrap/bootstrap";
 @import "./labels";
 @import "./buttons";
 @import "./search";
 @import "./tables";
 @import "./code";
 @import "./utilities/utilities";
-@import "./materialize";
 
 //
 // Import custom overrides

@@ -59,3 +59,6 @@ compress_html:
   startings: []
   blanklines: false
   profile: false
+
+  sass:
+    sass_dir: css
