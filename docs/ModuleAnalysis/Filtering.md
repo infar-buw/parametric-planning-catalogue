@@ -3,11 +3,10 @@ layout: module
 title: Filtering
 parent: Analysis Modules
 id: m-a-003
-images: [filtering-1.png, filtering-2.png]
+image: filtering-1.png
+summary: Sometimes it is necessary to filter a dataset for a range of values.
 nav_order: 1
 ---
-
-Sometimes it is necessary to filter a dataset for a range of values.
 
 ## Setup
 
