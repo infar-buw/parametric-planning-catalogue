@@ -2,9 +2,10 @@
 layout: module
 title: Slope
 parent: Analysis Modules
+id: m-a-006
+using: [m-a-001, m-a-003, m-a-002]
 nav_order: 1
 ---
-# Slope
 
 A mesh of terrain is required.
 
