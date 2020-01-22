@@ -1,24 +1,14 @@
-
-    <div class="card shadow-sm m-3">
-    
+<div class="card shadow-sm mb-5">
     {% if include.url %}
     <a href="{{ include.url | absolute_url }}">
-    {% endif %}
         {% if include.image %}
         <img src="{{ site.url }}{{ site.baseurl }}/img/{{ include.image }}" class="img-fluid card-img-top" alt="{{ include.title }}" />
         {% endif %}
-    {% if include.url %}
     </a>
     {% endif %}
     <div class="card-body"> 
-        {% if include.url %}
-        <a href="{{ include.url | absolute_url }}">
-        {% endif %}
-            <h4 class="card-title">{{ include.title }}</h4>
-        {% if include.url %}
-        </a>
-        {% endif %}
-        </div>
-    </div> 
-    
+        <h4 class="card-title">{{ include.title }}</h4>
+
+    </div>
+
 </div>
