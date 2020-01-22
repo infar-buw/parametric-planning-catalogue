@@ -37,7 +37,7 @@
             
             {% for j in (offset..limit) %}
                 {% assign p = include.pages[j] %}
-                {% include card.html title=p.title url=p.url image=p.images  %}
+                {% include card.html title=p.title url=p.url image=p.image  %}
             {% endfor %}
             </div>
       </div>

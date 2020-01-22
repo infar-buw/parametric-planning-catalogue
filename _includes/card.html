@@ -2,7 +2,7 @@
     {% if include.url %}
     <a href="{{ include.url | absolute_url }}">
         {% if include.image %}
-        <img src="{{ site.url }}{{ site.baseurl }}/img/{{ include.image[0] }}" class="img-fluid card-img-top" alt="{{ include.title }}" />
+        <img src="{{ site.url }}{{ site.baseurl }}/img/{{ include.image }}" class="img-fluid card-img-top" alt="{{ include.title }}" />
         {% endif %}
     </a>
     <div class="card-body"> 
