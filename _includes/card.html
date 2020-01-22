@@ -1,15 +1,12 @@
-<div class="card shadow-sm mb-5">
+<div class="card shadow m-5">
     {% if include.url %}
     <a href="{{ include.url | absolute_url }}">
         {% if include.image %}
         <img src="{{ site.url }}{{ site.baseurl }}/img/{{ include.image }}" class="img-fluid card-img-top" alt="{{ include.title }}" />
         {% endif %}
     </a>
-    <div class="card-body"> 
+    <div class="card-image-top"> 
         <h4 class="card-title">{{ include.title }}</h4>
-        {% if include.text != nil %}
-            <p class="card-text">{{ include.text }}</p>
-        {% endif %}
     </div>
     {% endif %}
 </div>
