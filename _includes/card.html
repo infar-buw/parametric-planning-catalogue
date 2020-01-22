@@ -1,12 +1,15 @@
 <div class="card shadow m-5">
     {% if include.url %}
     <a href="{{ include.url | absolute_url }}">
+    {% endif %}
+
         {% if include.image %}
         <img src="{{ site.url }}{{ site.baseurl }}/img/{{ include.image }}" class="img-fluid card-img-top" alt="{{ include.title }}" />
         {% endif %}
-    </a>
     <div class="card-img-overlay"> 
         <h4 class="card-title">{{ include.title }}</h4>
     </div>
+    {% if include.url %}
+    </a>
     {% endif %}
 </div>
