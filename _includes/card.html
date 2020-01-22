@@ -1,17 +1,21 @@
-{% if include.url %}
-    <a href="{{ include.url | absolute_url }}">
-    {% endif %}
-<div class="card shadow-sm m-3">
+
+    <div class="card shadow-sm m-3">
     
 
         {% if include.image %}
         <img src="{{ site.url }}{{ site.baseurl }}/img/{{ include.image }}" class="img-fluid card-img-top" alt="{{ include.title }}" />
         {% endif %}
+    {% if include.url %}
+    <a href="{{ include.url | absolute_url }}" class="card-img-overlay">
+    {% else %}
     <div class="card-img-overlay"> 
-        <h4 class="card-title">{{ include.title }}</h4>
-    </div>
-    
-</div>
-{% if include.url %}
-    </a>
     {% endif %}
+        
+            <h4 class="card-title">{{ include.title }}</h4>
+        </div>
+    {% if include.url %}
+    </a>
+    {% else %}
+    </div> 
+    {% endif %}
+</div>
