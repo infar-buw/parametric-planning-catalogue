@@ -2,7 +2,7 @@
 {% assign url_parts_size = url_parts | size %}
 {% assign base_url = url_parts[0] %}
 {% for i in (1..include.hierarchy) %}
-  {% assign base_url | concat: '/' | concat: url_parts[i] %}
+  {% assign base_url = base_url | concat: '/' | concat: url_parts[i] %}
 {% endfor %}
 {% assign child_pages = include.pages | where_exp: "item", "item.url contains base_url" %}
 {% assign include.hierarchy = include.hierarchy | plus: 1 %}
