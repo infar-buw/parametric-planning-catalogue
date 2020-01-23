@@ -12,7 +12,7 @@
   {% assign node_url_parts = node.url | split: '/' %}
   {% assign node_url_parts_size = node_url_parts | size | minus: 1%}
   {% assign filename = node_url_parts | last %}
-  {% if node_url_parts_size == new_hierarchy and filename != 'index.html' %}
+  {% if node_url_parts_size == include.hierarchy and filename != 'index.html' %}
     <li class="navigation-list-item {% if page.url == node.url %} active{% endif %}">
       <a href='{{node.url | absolute_url }}'>{{node.title}}</a>
     </li>
