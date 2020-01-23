@@ -1,12 +1,29 @@
 {% assign url_parts = page.url | split: '/' %}
 {% assign url_parts_size = url_parts | size %}
-{% assign rm = url_parts | last %}
-{% assign rm = '/' | append: rm %}
-{{ rm }}1
-{% assign base_url = page.url | replace: rm %}
+{% assign base_url = url_parts[0] %}
+{% for i in (1..include.hierarchy) %}
+  {% assign base_url | concat: '/' | concat: url_parts[i] %}
+{% endfor %}
+{% assign child_pages = include.pages | where_exp: "item", "item.url contains base_url" %}
+{% assign include.hierarchy = include.hierarchy | plus: 1 %}
+{% if include.hierarchy <= url_parts_size %}
+  {% assign base_url | concat: '/' | concat: url_parts[include.hierarchy] %}
+{% endif %}
+<ul>
+{% for node in child_pages %}
+  <li class="navigation-list-item {% if page.url == node.url %} active{% endif %}">
+    <a href='{{node.url | absolute_url }}'>{{node.title}}</a>
+  </li>
+  {% if node.url contains base_url %}
+    {% include nav.html pages=child_pages hierarchy=include.hierarchy %}
+  {% endif %}
+{% endfor %}
+</ul>
+
 <nav role="navigation" aria-label="Main navigatino">
   <ul class="navigation-list">
     {% for node in site.pages %}
+
       {% if node.url contains base_url %}
         {% assign node_url_parts = node.url | split: '/' %}
         {% assign node_url_parts_size = node_url_parts | size %}
