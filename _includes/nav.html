@@ -11,11 +11,15 @@
 {% endif %}
 <ul>
 {% for node in child_pages %}
-  <li class="navigation-list-item {% if page.url == node.url %} active{% endif %}">
-    <a href='{{node.url | absolute_url }}'>{{node.title}}</a>
-  </li>
-  {% if node.url contains base_url %}
-    {% include nav.html pages=child_pages hierarchy=new_hierarchy %}
+  {% assign node_url_parts = node.url | split: '/' %}
+  {% assign node_url_parts_size = url_parts | size %}
+  {% if node_url_parts_size == new_hierarchy %}
+    <li class="navigation-list-item {% if page.url == node.url %} active{% endif %}">
+      <a href='{{node.url | absolute_url }}'>{{node.title}}</a>
+    </li>
+    {% if node.url contains base_url %}
+      {% include nav.html pages=child_pages hierarchy=new_hierarchy %}
+    {% endif %}
   {% endif %}
 {% endfor %}
 </ul>
