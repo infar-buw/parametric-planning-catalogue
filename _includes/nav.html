@@ -4,8 +4,7 @@
 {% for i in (1..include.hierarchy) %}
   {% assign base_url = base_url | concat: '/' | concat: url_parts[i] %}
 {% endfor %}
-{{ base_url }} hier
- 
+{{ base_url }}-{{ url_parts[0] }}-{{ url_parts[1] }}
 
 <nav role="navigation" aria-label="Main navigation">
   <ul class="navigation-list">
