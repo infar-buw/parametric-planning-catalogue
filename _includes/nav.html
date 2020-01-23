@@ -6,14 +6,11 @@
 {% endfor %}
 {% assign child_pages = include.pages | where_exp: "item", "item.url contains base_url" %}
 {% assign new_hierarchy = include.hierarchy | plus: 1 %}
-{% if new_hierarchy < url_parts_size %}
-  {% assign base_url = base_url | append: '/' | append: url_parts[new_hierarchy] %}
-{% endif %}
 <ul>
 {% for node in child_pages %}
   {% assign node_url_parts = node.url | split: '/' %}
   {% assign node_url_parts_size = node_url_parts | size | minus: 1%}
-  {% if node_url_parts_size < new_hierarchy %}
+  {% if node_url_parts_size <= new_hierarchy %}
     <li class="navigation-list-item {% if page.url == node.url %} active{% endif %}">
       <a href='{{node.url | absolute_url }}'>{{node.title}}</a>
     </li>

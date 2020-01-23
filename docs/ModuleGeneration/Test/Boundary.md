@@ -1,7 +1,6 @@
 ---
 layout: module
 title: Boundary
-parent: Generation Modules
 nav_order: 1
 ---
 # Boundary
