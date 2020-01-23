@@ -20,7 +20,7 @@
     {% if current_hierarchy <= url_parts_size %}
       {% if node.url contains base_url_children %}
         {% include nav.html pages=child_pages hierarchy=current_hierarchy %}
-        {% assign current_hierarchy | minus: 1 %}
+        {% assign current_hierarchy = current_hierarchy | minus: 1 %}
       {% endif %}
     {% endif %}
   {% endif %}
