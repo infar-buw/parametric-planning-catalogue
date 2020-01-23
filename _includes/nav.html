@@ -4,14 +4,13 @@
 {% assign base_url = page.url | replace: rm %}
 <nav role="navigation" aria-label="Main navigatino">
   <ul class="navigation-list">
-    {% assign pages_list = site.pages | sort:"nav_order" %}
-    {% for node in pages_list %}
+    {% for node in site.pages %}
       {% if node.url contains base_url %}
         {% assign node_url_parts = node.url | split: '/' %}
         {% assign node_url_parts_size = node_url_parts | size %}
         {% assign filename = node_url_parts | last %}
         {% if url_parts_size == node_url_parts_size and filename != 'index.html' %}
-          <li class="navigation-list-item {% if page.url == node.url %}active{% endif %} navigation-list-item-{{ url_parts_size }}">
+          <li class="navigation-list-item {% if page.url == node.url %} active{% endif %} navigation-list-item-{{ url_parts_size }}">
             <a href='{{node.url | absolute_url }}'>{{node.title}}</a>
           </li>
         {% endif %}
