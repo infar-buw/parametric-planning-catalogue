@@ -1,6 +1,7 @@
 {% assign url_parts = page.url | split: '/' %}
 {% assign url_parts_size = url_parts | size %}
 {% assign rm = '/' | append: url_parts | last %}
+{{ rm }}
 {% assign base_url = page.url | replace: rm %}
 <nav role="navigation" aria-label="Main navigatino">
   <ul class="navigation-list">
