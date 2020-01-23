@@ -7,11 +7,6 @@
 {{ base_url }}-{{ url_parts[0] }}-{{ url_parts[1] }}
 {% assign child_pages = include.pages | where_exp: "item", "item.url contains base_url" %}
 {{ child_pages | size }}
-{% assign new_hierarchy = include.hierarchy | plus: 1 %}
-{% if new_hierarchy < url_parts_size %}
-  {% assign base_url | concat: '/' | concat: url_parts[new_hierarchy] %}
-  {{ base_url }} new hierarchy
-{% endif %}
 
  
 
