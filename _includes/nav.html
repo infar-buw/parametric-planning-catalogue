@@ -18,7 +18,7 @@
     <li class="navigation-list-item {% if page.url == node.url %} active{% endif %}">
       <a href='{{node.url | absolute_url }}'>{{node.title}}</a>
     </li>
-    {% if hierarchy < url_parts_size nad node.url contains base_url_children %}
+    {% if hierarchy < url_parts_size and node.url contains base_url_children %}
       {% assign new_hierarchy = include.hierarchy | plus: 1 %}
       {% include nav.html pages=child_pages hierarchy=new_hierarchy %}
     {% endif %}
