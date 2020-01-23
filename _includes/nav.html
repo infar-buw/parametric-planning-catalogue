@@ -15,7 +15,7 @@
   {% assign node_url_parts_size = node_url_parts | size %}
   {{ node_url_parts_size }} - {{new_hierarchy}}
 
-  {% if node_url_parts_size <= new_hierarchy %}
+  {% if node_url_parts_size <= new_hierarchy | plus: 1 %}
     <li class="navigation-list-item {% if page.url == node.url %} active{% endif %}">
       <a href='{{node.url | absolute_url }}'>{{node.title}}</a>
     </li>
