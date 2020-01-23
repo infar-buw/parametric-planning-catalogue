@@ -10,7 +10,7 @@
   {% assign base_url = base_url | append: '/' | append: url_parts[new_hierarchy] %}
 {% endif %}
 <ul>
-{% assign new_hierarchy = new_hierarchy | plus: 1 %}
+{% assign new_hierarchy = new_hierarchy | plus: 2 %}
 {% for node in child_pages %}
   {% assign node_url_parts = node.url | split: '/' %}
   {% assign node_url_parts_size = node_url_parts | size %}
