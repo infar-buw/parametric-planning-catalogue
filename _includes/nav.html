@@ -4,7 +4,7 @@
 {% for i in (1..include.hierarchy) %}
   {% assign base_url = base_url | append: '/' | append: url_parts[i] %}
 {% endfor %}
-{{ base_url }}-{{url_parts}}
+{{ base_url }}-{{url_parts}}-{{url_parts_size}}
 {% assign child_pages = include.pages | where_exp: "item", "item.url contains base_url" %}
 {% assign hierarchy = include.hierarchy | plus: 1 %}
 {% if hierarchy < url_parts_size %}
