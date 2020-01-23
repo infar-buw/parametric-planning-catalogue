@@ -1,5 +1,5 @@
 {% assign url_parts = page.url | split: '/' %}
-{% assign url_parts_size = url_parts | size %}
+{% assign url_parts_size = url_parts | size | minus: 1 %}
 {% assign base_url = url_parts[0] %}
 {% for i in (1..include.hierarchy) %}
   {% assign base_url = base_url | append: '/' | append: url_parts[i] %}
