@@ -2,11 +2,9 @@
 {% assign url_parts_size = url_parts | size %}
 {% assign rm = '/' | append: url_parts | last %}
 {% assign base_url = page.url | replace: rm %}
-{{ base_url }}-{{ rm }}-{{url_parts_size}}-{{url_parts}}
 <nav role="navigation" aria-label="Main navigatino">
   <ul class="navigation-list">
     {% for node in site.pages %}
-    {{node.url}}
       {% if node.url contains base_url %}
         {% assign node_url_parts = node.url | split: '/' %}
         {% assign node_url_parts_size = node_url_parts | size %}
