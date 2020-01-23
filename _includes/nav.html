@@ -4,7 +4,7 @@
 {% for i in (1..include.hierarchy) %}
   {% assign base_url = base_url | concat: '/' | concat: url_parts[i] %}
 {% endfor %}
-{{ base_url }}
+{{ base_url }} hier
  
 
 <nav role="navigation" aria-label="Main navigation">
