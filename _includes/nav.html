@@ -14,14 +14,13 @@
 {% for node in child_pages %}
   {% assign node_url_parts = node.url | split: '/' %}
   {% assign node_url_parts_size = node_url_parts | size | minus: 1 %}
-  1 {{ node_url_parts_size }}
+  1-{{ node_url_parts_size }}-{{ current_hierarchy }}
   {% if node_url_parts_size == current_hierarchy %}
+    2
     <li class="navigation-list-item {% if page.url == node.url %} active{% endif %}">
       <a href='{{node.url | absolute_url }}'>{{node.title}}</a>
     </li>
-    2
     {% if current_hierarchy <= url_parts_size %}
-      3
       {% if node.url contains base_url_children %}
         {% assign new_hierarchy = include.hierarchy | plus: 1 %}
         {% include nav.html pages=child_pages hierarchy=new_hierarchy %}
