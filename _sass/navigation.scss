@@ -6,31 +6,21 @@
   margin-top: 0;
   margin-bottom: 0;
   list-style: none;
-  &.active {
-    color: $body-text-color;
-  }
+
 }
 ul .navigation-list{
   padding-left: $sp-3;
   list-style: none;
 }
-
+.navigation-list-item .active {
+  color: $body-text-color;
+}
 .navigation-list-item {
   @include fs-4;
   margin: 0;
 
   @include mq(md) {
     @include fs-3;
-  }
-
-  .navigation-list-child-list {
-    display: none;
-  }
-
-  &.active {
-    .navigation-list-child-list {
-      display: block;
-    }
   }
 }
 
