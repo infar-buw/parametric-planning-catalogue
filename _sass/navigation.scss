@@ -23,8 +23,10 @@ ul .navigation-list{
     }
 
     &.active {
+      color: $body-text-color;
       &::before {
         color: $body-text-color;
+        content: "+ ";
       }
     }
   }
