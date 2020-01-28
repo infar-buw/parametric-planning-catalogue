@@ -15,6 +15,7 @@ ul .navigation-list{
 }
 .navigation-list-item .active {
   color: $body-text-color;
+  font-weight: 600;
 }
 .navigation-list-item {
   @include fs-4;

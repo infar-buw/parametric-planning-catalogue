@@ -26,7 +26,7 @@
       {% endif %}
     {% endif %}
     <li class="navigation-list-item {% if active_path == true %}active{% endif %}">
-      <a href='{{node.url | absolute_url }}'>{{node.title}}</a>
+      <a href='{{node.url | absolute_url }}' class="navigation-list-link {% if active_path == true %}active{% endif %}">{{node.title}}</a>
       {% if show_children == true %}
         {% include nav.html pages=child_pages hierarchy=current_hierarchy %}
         {% assign current_hierarchy = current_hierarchy | minus: 1 %}
