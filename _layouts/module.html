@@ -6,6 +6,22 @@ layout: default
     <div class="col">
         <h1>{{ page.title }}</h1>
         {{ page.summary }}
+
+        Wikipeda:
+        <div id="wiki"></div>
+        <script type="text/javascript">
+            fetch("https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch={{page.title}}&srlimit=1&format=json")
+            .then(function(response){ return response.json();})
+            .then(function(response){
+                var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles="+response.query.search[0].title;
+                fetch(query)
+                .then(function(response){ return response.json();})
+                .then(function(response){
+                    console.log(response.query.pages[0].extract);
+                    document.getElementById('divID').innerHTML += response.query.pages[0].extract;
+                })
+            }).catch(function(error){console.log(error);});
+        </script>
     </div>
     {% if page.image %}
     <div class="col">
@@ -17,16 +33,15 @@ layout: default
 
 {% if page.using %}
     {% assign related_pages = site.pages | where_exp: "item", "page.using contains item.id" %}
-    <hr>
     <h2 class="text-delta">Can use</h2>
     {% include page_carousel.html pages=related_pages count="4" id="pagecarouseluse" %}
 {% endif %}
 {% assign related_pages = site.pages | where_exp: "item", "item.using contains page.id" %}
-{% if related_pages %}
-    <hr>
+{% assign related_pages_size = related_pages | size %}
+{% if related_pages_size > 0 %}
     <h2 class="text-delta">Used by</h2>
     {% include page_carousel.html pages=related_pages count="4" id="pagecarouselusedby" %}
 {% endif %}
-
+    <hr>
 {{ content }}
 

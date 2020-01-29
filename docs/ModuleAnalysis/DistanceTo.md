@@ -1,12 +1,11 @@
 ---
 layout: module
 title: Distance To
-parent: Analysis Modules
 id: m-a-001
 using: [m-a-002, m-a-003, m-a-004, m-a-005, m-a-006]
 image: distance-to-1.png
 summary: Calculates direct distance between objects.
-nav_order: 1
+
 ---
 
 ## Setup

@@ -1,14 +1,10 @@
 ---
 layout: module
 title: Slicing Tree
-parent: Generation Modules
-nav_order: 1
+image: slicing-tree-1.png
+summary: Subdivides boundary polygons in tree like structure. Useful to create orthogonal parcels on a street blocks.
+
 ---
-# Slicing Tree
-
-![](../../../img/slicing-tree-1.png)
-
-Subdivides boundary polygons in tree like structure. Useful to create orthogonal parcels on a street blocks.
 
 ## Setup
 

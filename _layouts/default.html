@@ -70,14 +70,21 @@ layout: table_wrappers
             {% else %}
               {{ content }}
             {% endif %}
-
-          {% if page.has_children == true and page.has_toc != false %}
+            https://en.wikipedia.org/w/index.php?sort=relevance&search=traditional+weaving
+            https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=Weaving
+          {% if page.has_toc == true %}
             <hr>
             <h2 class="text-delta">Table of contents</h2>
-            {% assign children_list = site.pages | sort:"nav_order" %}
+
+            {% assign url_parts = page.url | split: '/' %}
+            {% assign url_parts_size = url_parts | size | minus: 1 %}
+            {% assign child_pages = site.pages | where_exp: "item", "item.url contains page.url" | sort:"nav_order"%}
             <ul>
-              {% for child in children_list %}
-                {% if child.parent == page.title and child.title != page.title %}
+              {% for child in child_pages %}
+              {% assign child_url_parts = child.url | split: '/' %}
+              {% assign child_url_parts_size = child_url_parts | size | minus: 2 %}
+  
+                {% if child_url_parts_size <= url_parts_size and child.title != page.title %}
                 <li>
                   <a href="{{ child.url | absolute_url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
                 </li>

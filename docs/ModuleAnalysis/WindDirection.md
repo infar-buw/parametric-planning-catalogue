@@ -1,7 +1,6 @@
 ---
 layout: module
 title: Wind Direction
-parent: Analysis Modules
 nav_order: 1
 ---
 # Wind Direction

@@ -6,16 +6,13 @@
   margin-top: 0;
   margin-bottom: 0;
   list-style: none;
-  font-size: 1.5em;
 }
 ul .navigation-list{
   padding-left: $sp-3;
   list-style: none;
-  font-size: 0.9em;
 }
 .navigation-list-item .active {
   color: $body-text-color;
-  font-weight: 600;
 }
 .navigation-list-item {
   @include fs-4;

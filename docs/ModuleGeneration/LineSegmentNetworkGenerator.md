@@ -1,14 +1,10 @@
 ---
 layout: module
 title: Line Segment Network Generator
-parent: Generation Modules
-nav_order: 1
+image: line-segment-network-generator-1.png
+summary: Generates variations of line networks based on existing lines, limiting parameters and a random factor.
+
 ---
-# Line Segment Network Generator
-
-![](../../../img/line-segment-network-generator-1.png)
-
-Generates variations of line networks based on existing lines, limiting parameters and a random factor.
 
 ## Setup
 
