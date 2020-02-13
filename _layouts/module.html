@@ -2,46 +2,51 @@
 layout: default
 ---
 
-<div class="row">
-    <div class="col">
-        <h1>{{ page.title }}</h1>
-        {{ page.summary }}
+{% assign module = site.data.relations | where:"title", page.title | first %}
+{% assign used_modules = site.data.relations | where_exp:"item", "module.using contains item.id" | map: "title" %}
+{% assign used_by_modules = site.data.relations | where_exp:"item","item.using contains module.id" | map: "title" %}
+       
+{% assign used_pages = site.pages | where_exp: "item", "used_modules contains item.title" %}
+{% assign used_by_pages = site.pages | where_exp: "item", "used_by_modules contains item.title" %}
 
-        Wikipeda:
-        <div id="wiki"></div>
-        <script type="text/javascript">
-            fetch("https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch={{page.title}}&srlimit=1&format=json")
-            .then(function(response){ return response.json();})
-            .then(function(response){
-                var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles="+response.query.search[0].title;
-                fetch(query)
-                .then(function(response){ return response.json();})
-                .then(function(response){
-                    console.log(response.query.pages[0].extract);
-                    document.getElementById('divID').innerHTML += response.query.pages[0].extract;
-                })
-            }).catch(function(error){console.log(error);});
-        </script>
+{% assign used_size = used_pages | size %}
+{% assign used_by_size = used_by_pages | size %}
+
+<div class="row">
+    <div class="col-6">
+        <h1>{{ page.title }}</h1>
+        {% if used_size > 0 or used_by_size > 0 %}
+
+        <h2 class="no_toc text-delta" id="table-of-contents"> 
+            <a href="#table-of-contents" class="anchor-heading">
+                <svg viewBox="0 0 16 16" aria-hidden="true">
+                <use xlink:href="#link"></use></svg></a> Table of contents</h2>
+                <ol id="markdown-toc">
+                    <li><a href="#description" id="markdown-toc-site-logo">Description</a></li>
+                    <li><a href="#useable" id="markdown-toc-search">Useable Modules</a></li>
+                    <li><a href="#dependent" id="markdown-toc-aux-links">Used by Modules</a></li>
+                </ol>    
+        {% endif %}
+        {{ page.summary }}
     </div>
     {% if page.image %}
-    <div class="col">
+    <div class="col-3">
         <img src="{{ site.url }}{{ site.baseurl }}/img/{{ page.image }}" class="card-img-top" />
     </div>
     {% endif %}
-</div>
+</div> 
 
-
-{% if page.using %}
-    {% assign related_pages = site.pages | where_exp: "item", "page.using contains item.id" %}
-    <h2 class="text-delta">Can use</h2>
-    {% include page_carousel.html pages=related_pages count="4" id="pagecarouseluse" %}
-{% endif %}
-{% assign related_pages = site.pages | where_exp: "item", "item.using contains page.id" %}
-{% assign related_pages_size = related_pages | size %}
-{% if related_pages_size > 0 %}
-    <h2 class="text-delta">Used by</h2>
-    {% include page_carousel.html pages=related_pages count="4" id="pagecarouselusedby" %}
-{% endif %}
-    <hr>
+<h2 id="description">Description</h2>
 {{ content }}
 
+
+{% if used_size > 0 %}
+    <hr>
+    <h2 id="useable">Useable Modules</h2>
+    {% include page_carousel.html pages=used_pages count="4" id="pagecarouseluseable" %}
+{% endif %}
+{% if used_by_size > 0 %}
+    <hr>
+    <h2 id="dependent">Used by Modules</h2>
+    {% include page_carousel.html pages=used_by_pages count="4" id="pagecarouseldependent" %}
+{% endif %}
