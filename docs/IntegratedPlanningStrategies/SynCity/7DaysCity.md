@@ -4,6 +4,7 @@ title: 7 Days City
 team: Bogdan Shevchenko, Ulysse Fontaine, Frederic Schneider
 video: https://vimeo.com/187953333
 ---
+#### Concept
 
 Making a city an attractive place, is an urban project that provides an environment where the inhabitants have convenient access to parks and squares and can find their places easily, feel as actor of the city and have opportunities for their self development.
 

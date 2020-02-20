@@ -4,6 +4,7 @@ title: Change Exchange City
 team: Maria Victoria Behler, Helena Louisa Pooch, Maria Jose Landeta
 video: https://vimeo.com/187952997
 ---
+#### Concept
 
 Since Ethiopia recognizes a rapid urbanization trend and will experience a high population influx from rural to urban areas in the future, each new city of currently 2500 planned cities will be faced with new challenges in social, economic and environmental questions.
 In which way can we plan productive cities with strong identities, where interconnections among people, infrastructure and services can be placed, and moreover, where a livable and resilient city is given to its citizens? A city that couples urban change with social exchange?

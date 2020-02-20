@@ -5,6 +5,8 @@ team: Burcu Cimenoglu, Christoph Hanisch and Kateryna Konieva
 video: https://vimeo.com/187976638
 ---
 
+#### Concept
+
 The motivation for our project is to create a city where Ethiopian people have an alternative to fast growing metropolises, like Addis Abeba, with the access to basic infrastructure, job
 opportunities and better living standards.
 
