@@ -1,12 +1,12 @@
 ---
 layout: module
 title: Slope
-parent: Analysis Modules
-nav_order: 1
----
-# Slope
+id: m-a-006
+using: [m-a-001, m-a-003, m-a-002]
+summary: A mesh of terrain is required.
 
-A mesh of terrain is required.
+---
+
 
 * Calculate normal vector with [Value At Point]() on a terrain.
 * Calculate angle between normal vector and the z-vector pointing directly upwards (0, 0, 1). The angle represents the slope angle.

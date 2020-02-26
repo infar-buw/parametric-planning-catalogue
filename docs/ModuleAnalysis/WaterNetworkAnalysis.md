@@ -1,14 +1,9 @@
 ---
 layout: module
 title: Pressurised Water Network Analysis
-parent: Analysis Modules
-nav_order: 1
+summary: Access to clean and fresh water is a basic requirement for a healthy city. Storage and distribution can happen in many ways and it affects the social and spatial structure of a city. Pressurised water networks are a common way to provide access. With the software EPANET these networks can be calculated in an efficient way and allow comparison of different distribution layouts.
+image: water-network-analysis-1.png
 ---
-# Pressurised Water Network Analysis
-
-![](../../../img/water-network-analysis-1.png)
-
-**Access to clean and fresh water is a basic requirement for a healthy city.** Storage and distribution can happen in many ways and it affects the social and spatial structure of a city. Pressurised water networks are a common way to provide access. With the software EPANET these networks can be calculated in an efficient way and allow comparison of different distribution layouts.
 
 ## Setup
 

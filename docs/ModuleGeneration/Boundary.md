@@ -1,14 +1,10 @@
 ---
 layout: module
 title: Boundary
-parent: Generation Modules
-nav_order: 1
+image: boundary-1.png
+summary: Creates a context-aware boundary of predefined size.
+
 ---
-# Boundary
-
-| ![](../../../img/boundary-1.png) | ![](../../../img/boundary-2.png) |
-
-Creates a context-aware boundary of predefined size.
 
 ## Setup
 

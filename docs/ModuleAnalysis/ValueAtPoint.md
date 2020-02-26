@@ -1,14 +1,10 @@
 ---
 layout: module
 title: Value At Point
-parent: Analysis Modules
-nav_order: 1
+image: value-at-point-1.png
+summary: Evaluates an object such as bitmap or mesh at a specific point for a specific value.
+
 ---
-# Value At Point
-
-![](../../../img/value-at-point-1.png)
-
-Evaluates an object such as bitmap or mesh at a specific point for a specific value.
 
 ## Setup
 

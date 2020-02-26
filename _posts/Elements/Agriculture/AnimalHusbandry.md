@@ -1,4 +1,9 @@
-# Animal Husbandry
+---
+layout: module
+title: Animal Husbandry
+summary: 
+
+--- 
 
 ## Agricultural Land Use
 Can be a subtype of [Agricultural Land Use]().

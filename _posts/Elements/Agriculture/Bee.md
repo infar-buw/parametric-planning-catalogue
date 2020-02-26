@@ -1,4 +1,9 @@
-# Bee
+---
+layout: module
+title: Bee
+summary: 
+
+---
 
 ## Animal Husbandry
 

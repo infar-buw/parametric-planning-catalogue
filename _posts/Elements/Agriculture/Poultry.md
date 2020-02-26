@@ -1,4 +1,9 @@
-# Poultry
+---
+layout: module
+title: Poultry
+summary: 
+
+---
 
 ## Animal Husbandry
 

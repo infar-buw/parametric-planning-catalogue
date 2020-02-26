@@ -1,14 +1,10 @@
 ---
 layout: module
 title: Divide By Area
-parent: Generation Modules
-nav_order: 1
+image: divide-by-area-1.png
+summary: Divides a polygon in predefined areas. Useful to create parcels of specific area on a street blocks.
+
 ---
-# Divide By Area
-
-![](../../../img/divide-by-area-1.png)
-
-Divides a polygon in predefined areas. Useful to create parcels of specific area on a street blocks.
 
 ## Setup
 

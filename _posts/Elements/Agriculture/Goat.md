@@ -1,4 +1,9 @@
-# Goat
+---
+layout: module
+title: Goat
+summary: 
+
+---
 
 ## Animal Husbandry
 

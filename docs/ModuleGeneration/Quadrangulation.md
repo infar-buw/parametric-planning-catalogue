@@ -1,14 +1,10 @@
 ---
 layout: module
 title: Quadrangulation
-parent: Generation Modules
-nav_order: 1
+image: quadrangulation-1.png
+summary: A distribution of points can be connected through quadrangulation, meaning four points are always connected by lines with no other line between them. This results in a pattern of quads, that could suit i.e. as blocks.
+
 ---
-# Quadrangulation
-
-![](../../../img/quadrangulation-1.png)
-
-A distribution of points can be connected through quadrangulation, meaning four points are always connected by lines with no other line between them. This results in a pattern of quads, that could suit i.e. as blocks.
 
 ## Setup
 

@@ -1,4 +1,9 @@
-# Sheep
+---
+layout: module
+title: Sheep
+summary: 
+
+---
 
 ## Animal Husbandry
 

@@ -1,4 +1,9 @@
-# Cattle
+---
+layout: module
+title: Cattle
+summary: 
+
+---
 
 ## Animal Husbandry
 

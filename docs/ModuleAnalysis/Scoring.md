@@ -1,13 +1,9 @@
 ---
 layout: module
 title: Scoring
-parent: Analysis Modules
 id: m-a-005
-using: [m-a-001, m-a-003, m-a-002]
-nav_order: 1
+summary: Compares numbers of a dataset with preferred number and derives a score from difference.
 ---
-
-Compares numbers of a dataset with preferred number and derives a score from difference.
 
 ## Setup
 

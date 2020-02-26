@@ -137,3 +137,24 @@ $btn-primary-color: $primary;
 //lg: $content-width + $nav-width,
 //xl: 1400px
 //); 
+.card a > div {
+    background-color: #FD885255;
+}
+
+.card a > div:hover{
+    background-color: #FD885200;
+}
+.card a > div:hover .module-title{
+    background-color: #666666;
+}
+.module-title{
+    font-weight: 600;
+    font-size: 14px !important;
+    color: #fff;
+    background-color: #FD8852;
+    margin: 0 -20px;
+}
+.card-word-wrap {
+    white-space: normal !important;
+    word-wrap: normal !important;
+}
