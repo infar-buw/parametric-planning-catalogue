@@ -1,5 +1,5 @@
 ---
 layout: home
-title: Docs
+title: Catalogue
 nav_order: 1
 ---

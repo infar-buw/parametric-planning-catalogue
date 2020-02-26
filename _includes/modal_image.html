@@ -1,0 +1,15 @@
+{% if include.image %}
+<a href="" data-toggle="modal" data-target="#modal{{include.title}}">
+    <img src="{{ site.url }}{{ site.baseurl }}/img/{{ include.image }}" width="200px" height="300px" class="img-fluid" alt="{{ include.title }}" />
+</a>
+  <!-- Modal -->
+  <div class="modal fade bd-example-modal-xl" id="modal{{include.title}}" tabindex="-1" role="dialog" aria-labelledby="{{include.title}}" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <img src="{{ site.url }}{{ site.baseurl }}/img/{{ include.image }}" class="img-fluid" alt="{{ include.title }}" />
+      </div>
+      </div>
+    </div>
+  </div>
+{% endif %}

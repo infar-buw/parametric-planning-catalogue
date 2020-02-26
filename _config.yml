@@ -14,9 +14,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: IPS - Catalogue
-description: A Catalogue for integrated planning strategies and components
-baseurl: "/ips-catalogue" # the subpath of your site, e.g. /blog
+title: IN³ Toolbox
+description: A Catalogue for Integrated Planning Strategies and Components
+baseurl: "/ips-catalogue/" # the subpath of your site, e.g. /blog
 url: "https://infar-buw.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty
@@ -36,7 +36,7 @@ heading_anchors: true
 
 # Aux links for the upper right navigation
 aux_links:
-  "Just the Docs on GitHub":
+  "IN³ Toolbox on Github":
     - "//github.com/infar-buw/ips-catalogue"
 
 # Footer content appears at the bottom of every page's main content

@@ -5,12 +5,16 @@ team: Michaela Mösing, Benjamin Rothmeier, Anthea Swart & Yunhang Wang
 video: https://vimeo.com/281793845
 ---
 
-#### Concept
+### Concept
 
 The intense population growth and thus the urbanization leads to the emerge of new cities in the Ethiopian rural areas. This rural-urban transformation will take place in a very short period of time and will require very careful and integrated planningstrategies to ensure the mitigation of impacts on the environment and the integration of bottom-up strategies for a humane environment. (ARUP, 2016a; Gehl, 2010)
 
+{% include modal_image.html title="Scenarios" image="RuralUrbanMetabolism/BalancingWurer-Scenarios.jpg" %}
+
 Therefore, this strategy called Balancing Wurer is NOT just to develop a set design for an environmental friendly Wurer. It is rather to provide a PARTICIPATION TOOL, taking the protected goods into acount and helping the rural communities to make the right DECISIONS for developing a balanced LANDUSE-PLAN.(Zimmermann, 2014)
 Urban planning must be thought of interdisciplinary. The planning should include specialist planners, administrations, stakeholders and citizens. 
+
+{% include modal_image.html title="Process" image="RuralUrbanMetabolism/BalancingWurer-Process.jpg" %}
 
 The planning strategy can be explained in three steps: 
 

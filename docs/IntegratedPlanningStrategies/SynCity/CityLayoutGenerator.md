@@ -5,7 +5,7 @@ team: Johannes Frölich, Vinzenz Rauch & Abdul Hamid Madarati
 video: https://vimeo.com/210055986
 ---
 
-#### Main Goals
+### Main Goals
 
 - **Density**
 High density city to waste as little
@@ -24,7 +24,9 @@ different factors such as topography,
 connectivity to surrounding cities, city size,
 building typologies.
 
-#### Methods
+{% include modal_image.html title="Scenarios" image="SynCity/CityLayoutGenerator-Scenarios.jpg" %}
+
+### Methods
 
 - **City Boundary**
 Physically calculated city boundary to find the
@@ -37,3 +39,5 @@ tables between them.
 Betweenness values are being used to
 distribute residential and commercial
 typologies within the city.
+
+{% include modal_image.html title="Process" image="SynCity/CityLayoutGenerator-Process.jpg" %}

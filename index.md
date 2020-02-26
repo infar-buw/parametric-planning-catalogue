@@ -2,8 +2,11 @@
 layout: default
 title: Home
 nav_order: 1
-description: "Just the Docs is a responsive Jekyll theme with built-in search that is easily customizable and hosted on GitHub Pages."
+description: "A Catalogue for Integrated Planning Strategies and Components"
 permalink: /
 ---
 
-# Focus on writing good documentation
+# [Integrated Infrastructure - IN³ Toolbox](https://www.uni-weimar.de/integrated-infrastructure)
+## Planning Strategies for Emerging Cities in Sub-Saharan Africa
+
+![]({{ "img/in3-circle.jpg" | absolute_url }})

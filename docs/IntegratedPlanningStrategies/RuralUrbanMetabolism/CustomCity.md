@@ -1,13 +1,15 @@
 ---
 layout: strategy
-title: Custom-City
+title: Custom City
 team: Constantin Friedrich Kozák, Jonas Wiel, Shunsuke Yoshida & Silke Weise
 video: https://vimeo.com/281793477
 ---
 
-#### Concept
+### Concept
 
 The custom-city project is an urban development strategy which is following the demands of the citizens.
+
+{% include modal_image.html title="Scenarios" image="RuralUrbanMetabolism/CustomCity-Scenarios.jpg" %}
 
 The focus is on creating a land use plan which is customised to the actual living conditions and the financial capabilities of each individuum in order to enable access to work, affordable housing, social environment and infrastructure.
 
