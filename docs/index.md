@@ -1,5 +1,5 @@
 ---
-layout: home
-title: Catalogue
-nav_order: 1
+layout: portfolio
+title: Modules
+nav_order: 0
 ---

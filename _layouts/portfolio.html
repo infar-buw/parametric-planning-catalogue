@@ -1,0 +1,64 @@
+---
+layout: default
+---
+{% assign layout_type = 'module' %}
+{% assign child_modules = site.pages | where_exp: "item", "item.url contains page.url" | where_exp: "item", "item.layout contains layout_type"%}
+{% assign tags = child_modules | map: "tags" | uniq | compact%}
+
+<h1>{{ page.title }}</h1>
+
+{{ content }}
+
+<div class="button-group filter-button-group">
+    {% for tag in tags %}
+    <button type="button" class="btn btn-secondary" data-filter=".{{ tag }}">
+       {{ tag }}
+    </button>
+    {% endfor %}
+    <button type="button" class="btn btn-primary" data-filter="*">All</button>
+  </div>
+  <div class="module-filter">
+    {% for module in child_modules %}
+    <div class="module-item {% for tag in module.tags %}{{tag}} {% endfor%}">
+            {% include card.html title=module.title url= module.url image=module.image %}
+    </div>
+    {% endfor %}
+  </div>
+
+
+
+
+  <script type="text/javascript" src="{{ '/assets/js/vendor/isotope.min.js' | absolute_url }}"></script>
+  <script>
+
+      $(document).ready(function() {var $moduleFilter = $('.module-filter').isotope({
+        itemSelector: '.module-item',
+        layoutMode: 'masonry',
+        masonry: {
+            columnWidth: 240,
+        }
+      });
+    
+      $('.filter-button-group').on( 'click', 'button', function() {
+        var filterValue = $(this).attr('data-filter');
+        $moduleFilter.isotope({ filter: filterValue });
+      });
+      $('.button-group button.btn').on('click', function(){
+          $('.button-group button.btn').removeClass('btn-primary');
+          $('.button-group button.btn').addClass('btn-secondary');
+          $(this).removeClass('btn-secondary');
+          $(this).addClass('btn-primary');
+      });
+      });
+  </script>
+  <style type="text/css">
+    .module-item {
+        float: left;
+        width: 240px;
+        height: 240px;
+
+    }
+
+    .module-item--width2 { width: 480px; }
+    .module-item--height2 { height: 480px; }
+  </style>

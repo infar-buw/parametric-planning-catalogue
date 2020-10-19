@@ -2,7 +2,7 @@
 layout: default
 title: Home
 nav_order: 1
-description: "A Catalogue for Integrated Planning Strategies and Components"
+description: "A Catalogue for Integrated Planning Strategies and Modules"
 permalink: /
 ---
 
