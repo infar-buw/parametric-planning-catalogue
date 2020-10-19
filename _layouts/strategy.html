@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <div class="row">
     <div class="col">
         <h1>{{ page.title }}</h1>
@@ -29,6 +30,21 @@ layout: default
             allowfullscreen></iframe>
         </div>
         </br>
+        {% endif %}
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        {% if page.modules %}
+            {% assign module = site.data.relations | where:"title", page.title | first %}
+            {% assign used_modules = site.data.relations | where_exp:"item", "page.modules contains item.id" | map: "title" %}
+            {% assign used_pages = site.pages | where_exp: "item", "used_modules contains item.title" %}
+            {% assign used_size = used_pages | size %}
+            {% if used_size > 0 %}
+                <hr>
+                <h2 id="useable">Related Modules</h2>
+                {% include page_carousel.html pages=used_pages count="4" id="pagecarouselused" %}
+            {% endif %}
         {% endif %}
     </div>
 </div>

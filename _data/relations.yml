@@ -10,19 +10,21 @@
 #
 - id: luadm
   title: Administration Land Use
-  using: [forcedist, ludist, evalscore, slpe, pubsqr, cntrcty, censub]
+  using: [forcedist, ludist, evalscore, slpe, pubsqr, censub]
 - id: luagr
+  type: element
   title: Agricultural Land Use
   using: [ludist, evalscore, winddir]
 - id: bound
   title: Boundary
   using: [evalscore]
-- id: cntrcty
-  title: City Center
+- id: citycenterdist
+  title: City Center Distribution
+  elements: [City Center]
   using: [clsnss, ludist, evalscore, forcedist, distto]
 - id: lucom
   title: Commercial Land Use
-  using: [ludist, movped, evalscore, slpe, pubspc, pubsqr, cntrcty, censub]
+  using: [ludist, movped, evalscore, slpe, pubspc, pubsqr, censub]
 - id: movcyc
   title: Cyclist Movement
   using: [btwnnss, clsnss, slpe, wtrflwdir]
@@ -52,7 +54,7 @@
   using: [evalscore, bound]
 - id: luind
   title: Industrial Land Use
-  using: [ludist, evalscore, winddir, movvehicle, slpe, pubsqr, cntrcty, censub]
+  using: [ludist, evalscore, winddir, movvehicle, slpe, pubsqr, citycenterdist, censub]
 - id: ludist
   title: Land Use Distribution
   using: [growthsim, evalscore, distto, valatpt, fltr]
@@ -67,11 +69,11 @@
   using: [btwnnss, clsnss, slpe, wtrflwdir]
 - id: pubspc
   title: Public Space
-  using: [cntrcty, censub, btwnnss, clsnss, movped, movcyc]
+  using: [citycenterdist, censub, btwnnss, clsnss, movped, movcyc]
 - id: pubsqr
   title: Public Square
   using: [pubspc]
-- id: quadtion
+- id: quadrang
   title: Quadrangulation
   using: [forcedist]
 - id: lurec

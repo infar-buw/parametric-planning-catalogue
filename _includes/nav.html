@@ -1,13 +1,13 @@
 {% assign url_parts = page.url | split: '/' %}
 {% assign url_parts_size = url_parts | size | minus: 1 %}
-{% assign base_url = url_parts[0] %}
+{% assign base_url = url_parts[0] | append: '/'%}
 {% for i in (1..include.hierarchy) %}
-  {% assign base_url = base_url | append: '/' | append: url_parts[i] %}
+  {% assign base_url = base_url | append: url_parts[i] | append: '/' %}
 {% endfor %}
 {% assign child_pages = include.pages | where_exp: "item", "item.url contains base_url" | sort:"nav_order"%}
 {% assign current_hierarchy = include.hierarchy | plus: 1 %}
 {% if current_hierarchy <= url_parts_size %}
-  {% assign base_url_children = base_url | append: '/' | append: url_parts[current_hierarchy] %}
+  {% assign base_url_children = base_url | append: url_parts[current_hierarchy] | append: '/' %}
 {% endif %}
 <ul class="navigation-list">
 {% for node in child_pages %}

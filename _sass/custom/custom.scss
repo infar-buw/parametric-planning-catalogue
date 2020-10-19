@@ -138,20 +138,25 @@ $nav-width: 300px;
 //xl: 1400px
 //); 
 .card a > div {
-    background-color: #FD885255;
+    background-color: #FD885200;
 }
 
 .card a > div:hover{
-    background-color: #FD885200;
+    background-color: #FD885255;
 }
 .card a > div:hover .module-title{
-    background-color: #666666;
+    background-color: #FD8852;
 }
+
+.card-inactive{
+    opacity:20%;
+}
+
 .module-title{
     font-weight: 600;
     font-size: 14px !important;
     color: #fff;
-    background-color: #FD8852;
+    background-color: #666666;
     margin: 0 -20px;
 }
 .card-word-wrap {
