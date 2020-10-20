@@ -1,9 +1,6 @@
 ---
 layout: portfolio
-title: Home
+title: Parametric Planning Catalogue
 description: "A Catalogue for Integrated Planning Strategies and Modules"
 permalink: /
 ---
-
-# Parametric Planning Catalogue
-

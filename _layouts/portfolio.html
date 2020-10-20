@@ -3,23 +3,34 @@ layout: default
 ---
 {% assign layout_type = 'module' %}
 {% assign child_modules = site.pages | where_exp: "item", "item.url contains page.url" | where_exp: "item", "item.layout contains layout_type"%}
-{% assign tags = child_modules | map: "tags" | uniq | compact%}
+{% assign tags = child_modules | map: "tags" | uniq | compact %}
 
 <h1>{{ page.title }}</h1>
 
 {{ content }}
 
+
 <div class="button-group filter-button-group">
+    <h3>Filter</h3>
     {% for tag in tags %}
-    <button type="button" class="btn btn-secondary" data-filter=".{{ tag }}">
+    <button type="button" class="btn btn-secondary" data-filter=".{{ tag | remove:' ' }}">
        {{ tag }}
     </button>
     {% endfor %}
     <button type="button" class="btn btn-primary" data-filter="*">All</button>
   </div>
+  
+  <div class="button-group sort-by-button-group">
+    <h3>Sort</h3>
+    <button type="button" class="btn btn-primary" data-sort-by="original-order">Normal</button>
+    <button type="button" class="btn btn-secondary" data-sort-by="title">Name</button>
+    <button type="button" class="btn btn-secondary" data-sort-by="tag">Tag</button>
+    </div>
+  </div>
+
   <div class="module-filter">
     {% for module in child_modules %}
-    <div class="module-item {% for tag in module.tags %}{{tag}} {% endfor%}">
+    <div class="module-item {% for tag in module.tags %}{{tag | remove:' '}} {% endfor%}" data-tag="{% for tag in module.tags %}{{tag | remove:' '}}{% endfor%}" data-title="{{ module.title | remove: ' '}}">
             {% include card.html title=module.title url= module.url image=module.image %}
     </div>
     {% endfor %}
@@ -36,27 +47,44 @@ layout: default
         layoutMode: 'masonry',
         masonry: {
             columnWidth: 240,
+        },
+        getSortData: {
+          title: '[data-title]', 
+          tag: '[data-tag]',
         }
       });
-    
-      $('.filter-button-group').on( 'click', 'button', function() {
-        var filterValue = $(this).attr('data-filter');
-        $moduleFilter.isotope({ filter: filterValue });
+      /* sorting */
+      $('.sort-by-button-group').on('click', 'button', function(){
+        var sortByValue = $(this).attr('data-sort-by');
+        $moduleFilter.isotope({ sortBy: sortByValue });
       });
-      $('.button-group button.btn').on('click', function(){
-          $('.button-group button.btn').removeClass('btn-primary');
-          $('.button-group button.btn').addClass('btn-secondary');
+      $('.sort-by-button-group button.btn').on('click', function(){
+          $('.sort-by-button-group button.btn').removeClass('btn-primary');
+          $('.sort-by-button-group button.btn').addClass('btn-secondary');
           $(this).removeClass('btn-secondary');
           $(this).addClass('btn-primary');
       });
+      /* filtering */
+      $('.filter-button-group').on( 'click', 'button', function() {
+        var filterValue = $(this).attr('data-filter');
+        $moduleFilter.isotope({ filter: filterValue });
+        $moduleFilter.isotope('updateSortData').isotope();
       });
+      $('.filter-button-group button.btn').on('click', function(){
+          $('.filter-button-group button.btn').removeClass('btn-primary');
+          $('.filter-button-group button.btn').addClass('btn-secondary');
+          $(this).removeClass('btn-secondary');
+          $(this).addClass('btn-primary');
+      });
+    });
+
+      
   </script>
   <style type="text/css">
     .module-item {
         float: left;
         width: 240px;
         height: 240px;
-
     }
 
     .module-item--width2 { width: 480px; }

@@ -1,9 +1,9 @@
 ---
 layout: module
 tags: [Street]
-title: Street Network Optimization
-image: NetworkOptimization.gif
-file: NetworkOptimization.gh
+title: Street Network Shortest Path
+image: NetworkShortestPath.gif
+file: NetworkShortestPath.gh
 
 ---
 
