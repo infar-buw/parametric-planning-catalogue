@@ -1,0 +1,157 @@
+
+[TITLE]
+EPANET Network generated through Rhino Grasshopper.
+Based on epanet by Open Water Analytics.
+Implementation by Martin Dennemark - Bauhaus University Weimar - InfAR Department.
+
+[JUNCTIONS]
+;ID   	Elev                	Demand              	Pattern             
+1     	-19.1747598511106   	100                 	                    	;
+2     	-33.5795321448893   	100                 	                    	;
+3     	-43.3368101443215   	100                 	                    	;
+4     	-48.6894746570373   	100                 	                    	;
+5     	-50                 	100                 	                    	;
+6     	-47.7373684997341   	100                 	                    	;
+7     	-42.4525141475645   	100                 	                    	;
+8     	-34.7457491775459   	100                 	                    	;
+9     	-25.2313550928059   	100                 	                    	;
+10    	-14.5047070782263   	100                 	                    	;
+
+
+[RESERVOIRS]
+;ID   	Head                	Pattern 
+
+
+[TANKS]
+;ID   	Elevation           	InitLevel   	MinLevel    	MaxLevel    	Diameter    
+0     	0                   	5           	0           	5           	10.0292534135935	;
+
+
+[PIPES]
+;ID   	Node1 	Node2 	Length              	Diameter    	Roughness   	MinorLoss   	Status    
+0     	0     	1     	21.6257119038371    	900         	120         	0           	Open      	;
+1     	1     	2     	17.5356056307051    	900         	120         	0           	Open      	;
+2     	2     	3     	13.9715594676544    	900         	120         	0           	Open      	;
+3     	3     	4     	11.3424431841507    	900         	120         	0           	Open      	;
+4     	4     	5     	10.0855082506807    	900         	120         	0           	Open      	;
+5     	5     	6     	10.2527801744695    	900         	120         	0           	Open      	;
+6     	6     	7     	11.3106005819163    	900         	120         	0           	Open      	;
+7     	7     	8     	12.62514262506      	900         	120         	0           	Open      	;
+8     	8     	9     	13.8030320871805    	900         	120         	0           	Open      	;
+
+
+[PUMPS]
+;ID   	Node1 	Node2 	Parameters          
+9     	9     	10    	POWER 20            	;
+
+
+[VALVES]
+;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss   
+
+[TAGS]
+
+[DEMANDS]
+;Junction        	Demand      	Pattern         	Category
+
+[STATUS]
+;ID Status/Setting
+
+[PATTERNS]
+;ID              	Multipliers
+;Demand Pattern
+
+[CURVES]
+;ID X-Value Y-Value
+
+[CONTROLS]
+
+[RULES]
+
+[ENERGY]
+ Global Efficiency  	75
+ Global Price       	0.0
+ Demand Charge      	0.0
+
+[EMITTERS]
+;Junction        	Coefficient
+
+[QUALITY]
+;Node            	InitQual
+
+[SOURCES]
+;Node            	Type        	Quality     	Pattern
+
+[REACTIONS]
+;Type     	Pipe/Tank       	Coefficient
+
+[REACTIONS]
+ Order Bulk            	1
+ Order Tank            	1
+ Order Wall            	1
+ Global Bulk           	0.0
+ Global Wall           	0.0
+ Limiting Potential    	0.0
+ Roughness Correlation 	0.0
+
+[MIXING]
+;Tank            	Model
+
+[TIMES]
+ Duration           	0:00 
+ Hydraulic Timestep 	1:00 
+ Quality Timestep   	0:10 
+ Rule Timestep          0:10
+ Pattern Timestep   	1:00 
+ Pattern Start      	0:00 
+ Report Timestep    	1:00 
+ Report Start       	0:00 
+ Start ClockTime    	12 am
+ Statistic          	None
+
+[REPORT]
+ Status             	No
+ Summary            	No
+ Page               	0
+
+[OPTIONS]
+ Units              	LPS
+ Headloss           	H-W
+ Specific Gravity   	1.0
+ Viscosity          	1.0
+ Trials             	40
+ Accuracy           	0.001
+ CHECKFREQ          	2
+ MAXCHECK           	10
+ DAMPLIMIT          	0
+ Unbalanced         	Continue 10
+ Pattern            	1
+ Demand Multiplier  	1.0
+ Emitter Exponent   	0.5
+ Quality            	None
+ Diffusivity        	1.0
+ Tolerance        	    0.01
+
+[COORDINATES]
+;Node 	X-Coord             	Y-Coord             
+0     	0                   	0                   	;
+1     	0                   	10                  	;
+2     	0                   	20                  	;
+3     	0                   	30                  	;
+4     	0                   	40                  	;
+5     	0                   	50                  	;
+6     	0                   	60                  	;
+7     	0                   	70                  	;
+8     	0                   	80                  	;
+9     	0                   	90                  	;
+10    	0                   	100                 	;
+
+
+[VERTICES]
+;Link X-Coord Y-Coord
+
+[LABELS]
+;X-Coord Y-Coord Label & Anchor Node
+
+[BACKDROP]
+
+[END]
