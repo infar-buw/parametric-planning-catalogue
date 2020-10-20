@@ -1,5 +1,5 @@
 ---
-layout: module
+layout: 
 tags: []
 title: Building Generation
 image: BuildingGeneration.gif

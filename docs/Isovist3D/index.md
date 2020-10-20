@@ -1,5 +1,5 @@
 ---
-layout: module
+layout: 
 tags: []
 title: Isovist 3D
 image: Isovist3D.gif

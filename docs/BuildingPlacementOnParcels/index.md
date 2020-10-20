@@ -1,5 +1,5 @@
 ---
-layout: module
+layout: 
 tags: []
 title: Placement on Parcel
 image: BuildingPlacementOnParcels.gif

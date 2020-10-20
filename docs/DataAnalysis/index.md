@@ -1,5 +1,5 @@
 ---
-layout: module
+layout: 
 tags: []
 title: Data Analysis
 image: DataAnalysis.gif

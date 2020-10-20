@@ -2,8 +2,8 @@
 layout: module
 tags: [Water, Street]
 title: Waterbased Street Growth
-image: WaterbasedStreetGrowth.gif
-file: WaterbasedStreetGrowth.gh
+image: WaterBasedStreetGrowth.gif
+file: WaterBasedStreetGrowth.gh
 
 ---
 

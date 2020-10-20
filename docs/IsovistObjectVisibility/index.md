@@ -1,5 +1,5 @@
 ---
-layout: module
+layout: 
 tags: []
 title: Isovist Object Visibility
 image: IsovistObjectVisibility.gif
