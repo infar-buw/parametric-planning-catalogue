@@ -14,8 +14,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: IN³ Toolbox
-description: A Catalogue for Integrated Planning Strategies and Components
+title: Parametric Planning Catalogue
+description: A Catalogue for Integrated Planning Strategies and Modules
 baseurl: "/ips-catalogue/" # the subpath of your site, e.g. /blog
 url: "https://infar-buw.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -36,11 +36,11 @@ heading_anchors: true
 
 # Aux links for the upper right navigation
 aux_links:
-  "IN³ Toolbox on Github":
+  "Parametric Planning Catalogue on Github":
     - "//github.com/infar-buw/ips-catalogue"
 
 # Footer content appears at the bottom of every page's main content
-footer_content: "Copyright &copy; 2020 Integrated Infrastructure - ECL-AA - InfAR Bauhaus-Universität Weimar. Distributed by an <a href=\"https://github.com/infar-buw/ips-catalogue/tree/master/LICENSE.txt\">MIT license.</a>"
+footer_content: "Copyright &copy; 2020 DecodingSpaces - ECL-AA - InfAR Bauhaus-Universität Weimar. Distributed by an <a href=\"https://github.com/infar-buw/ips-catalogue/tree/master/LICENSE.txt\">MIT license.</a>"
 
 # Color scheme currently only supports "dark" or nil (default)
 color_scheme: nil

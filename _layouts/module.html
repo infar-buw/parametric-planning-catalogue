@@ -2,19 +2,29 @@
 layout: default
 ---
 
-<div class="row">
-    <div class="col"></div>
+<div class="row clearfix">
+    <div class="col-12">
         <h1>{{ page.title }}</h1>
-        {% if page.image %}
-        <div class="col-3">
-            <img src="{{ site.url }}{{ site.baseurl }}/img/{{ page.image }}" class="card-img-top" />
-        </div>
-        {% endif %}
-        <a href="{{page.url}}{{page.file}}">
-            <button type="button" name="button" class="btn">Download</button>
-        </a>
     </div>
-</div> 
+    <div class="col-12">
+    <div class="col-12 col-sm-8 col-md-6 float-left p-5">
+        {% if page.image %}
+            <img src="{{ page.url | absolute_url }}{{ page.image }}" class="img-fluid" />
+        {% endif %}
+    </div>
+    {% if page.file %}  
+    <div class="w-100 text-center p-5">
+            <a href="{{ page.url | absolute_url }}{{page.file}}">
+                <button type="button" name="button" class="btn btn-lg btn-primary">Download</button>
+            </a>
+        </div>
+    {% endif %}
+    {% if page.content %}
+    <h2>Description</h2>
+    {{ content }}
+    {% endif %}
+    </div>
+    </div>
+</div>
 
-<h2 id="description">Description</h2>
-{{ content }}
+

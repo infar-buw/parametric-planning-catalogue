@@ -1,8 +1,8 @@
 <div class="card {% if include.url %} shadow {% endif %} m-5">
         {% if include.image %}
-        <img src="{{ include.url | absolute_url }}{{ include.image }}" width="200px" height="300px" class="img-fluid card-img-top" alt="{{ include.title }}" />
+        <img src="{{ include.url | absolute_url }}{{ include.image }}" width="200px" height="200px" class="img-fluid card-img-top" alt="{{ include.title }}" />
         {% else if include.url %}
-        <img src="{{ site.url }}{{ site.baseurl }}/img/no-img.jpg" width="200px" height="300px" class="img-fluid card-img-top {% if include.url %}{% else %}card-inactive {% endif %}"/>
+        <img src="{{'/assets/images/no-img.jpg' | absolute_url}}" width="200px" height="200px" class="img-fluid card-img-top {% if include.url %}{% else %}card-inactive {% endif %}"/>
         {% endif %}
     {% if include.url %}
     <a href="{{ include.url | absolute_url }}">
