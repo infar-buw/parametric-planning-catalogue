@@ -1,6 +1,6 @@
 ---
 layout: module
-tags: [StreetHierarchy]
+tags: [Street]
 title: Street Hierarchy
 image: StreetHierarchy.gif
 file: StreetHierarchy.gh
