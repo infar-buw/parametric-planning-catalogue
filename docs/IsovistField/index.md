@@ -1,6 +1,6 @@
 ---
 layout: module
-tags: [Visibility]
+tags: []
 title: Isovist Field
 image: IsovistField.gif
 file: IsovistField.gh

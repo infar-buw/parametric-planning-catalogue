@@ -1,6 +1,6 @@
 ---
 layout: module
-tags: [Data]
+tags: []
 title: Data Analysis
 image: DataAnalysis.gif
 file: DataAnalysis.zip

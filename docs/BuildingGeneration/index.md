@@ -1,6 +1,6 @@
 ---
 layout: module
-tags: [Building]
+tags: []
 title: Building Generation
 image: BuildingGeneration.gif
 file: BuildingGeneration.gh

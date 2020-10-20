@@ -1,6 +1,6 @@
 ---
 layout: module
-tags: [Visibility]
+tags: []
 title: Isovist 3D
 image: Isovist3D.gif
 file: Isovist3D.gh

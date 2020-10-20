@@ -1,6 +1,6 @@
 ---
 layout: module
-tags: [LandUse, Building]
+tags: []
 title: Placement on Parcel
 image: BuildingPlacementOnParcels.gif
 file: BuildingPlacementOnParcels.gh
