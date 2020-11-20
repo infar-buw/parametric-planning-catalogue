@@ -12,6 +12,7 @@ $logo: "{{ site.logo | absolute_url }}";
 //
 
 @import "./vendor/normalize.scss/normalize.scss";
+@import "./vendor/gh-fork-ribbon";
 
 //
 // Import Just the Docs scss

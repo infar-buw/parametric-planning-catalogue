@@ -1,14 +1,16 @@
-<div class="card {% if include.url %} shadow {% endif %} m-5">
-        {% if include.image %}
-        <img src="{{ include.url | absolute_url }}{{ include.image }}" width="200px" height="200px" class="img-fluid card-img-top" alt="{{ include.title }}" />
-        {% else if include.url %}
-        <img src="{{'/assets/images/no-img.jpg' | absolute_url}}" width="200px" height="200px" class="img-fluid card-img-top {% if include.url %}{% else %}card-inactive {% endif %}"/>
-        {% endif %}
-    {% if include.url %}
-    <a href="{{ include.url | absolute_url }}">
-        <div class="card-img-overlay card-word-wrap"> 
-            <h4 class="card-title module-title">{{ include.title }}</h4>
+{% if include.url %}
+<div class="card shadow m-5">
+        <a href="{{ include.url | absolute_url }}"> 
+            {% if include.image %}
+            <img src="{{ include.url | absolute_url }}{{ include.image }}" width="200px" height="200px" class="img-fluid card-img-top" alt="{{ include.title }}" />
+            {% else %}
+            <img src="{{'/assets/images/no-img.jpg' | absolute_url}}" width="200px" height="200px" class="img-fluid card-img-top"/>
+            {% endif %}
+        </a>
+        <div class="card-body p-2">
+            <a href="{{ include.url | absolute_url }}"> 
+                <button type="button" class="btn btn-sm btn-block btn-outline-primary">{{ include.title }}</button>
+            </a>
         </div>
-    </a>
-    {% endif %}
 </div>
+ {% endif %}

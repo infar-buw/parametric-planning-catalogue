@@ -52,10 +52,9 @@
 //$red-300: #dd2e2e;
 
 //bootstrap
-$primary: #FD8852 !default;
-//$secondary: #56BFC3;
-$secondary: #162D3C !default;
-$secondary-light: #162D3C22;
+$primary: #00b0f0 !default;
+$secondary: #0274be !default;
+$secondary-light: #0274be22;
 $enable-shadows: true !default;
 $enable-gradients: true !default;
 
@@ -142,23 +141,13 @@ $nav-width: 300px;
 }
 
 .card a > div:hover{
-    background-color: #FD885255;
-}
-.card a > div:hover .module-title{
-    background-color: #FD8852;
+    background-color: $primary;
 }
 
 .card-inactive{
     opacity:20%;
 }
 
-.module-title{
-    font-weight: 600;
-    font-size: 14px !important;
-    color: #fff;
-    background-color: #666666;
-    margin: 0 -20px;
-}
 .card-word-wrap {
     white-space: normal !important;
     word-wrap: normal !important;
@@ -171,7 +160,7 @@ $nav-width: 300px;
     background-image:none;
 }
 .logos a > img:hover {
-    background-color: #FD885255;
+    background-color: $primary;
     background-size: 100% 100%;
     background-position: 0 0;
 }

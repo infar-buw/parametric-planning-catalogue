@@ -13,41 +13,47 @@ layout: table_wrappers
       <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
     </symbol>
   </svg>
+  <a class="github-fork-ribbon right-bottom fixed" href="{{ site.github_link }}" data-ribbon="Contribute on GitHub" title="Contribute on GitHub">Contribute on GitHub</a>
 
   <div class="page-wrap">
-    <div class="side-bar">
-      <div class="site-header">
-        <a href="{{ site.url }}{{ site.baseurl }}" class="site-title lh-tight">{% include title.html %}</a>
-        <button class="menu-button fs-3 js-main-nav-trigger" data-text-toggle="Hide" type="button">Menu</button>
-      </div>
-
-      <div class="navigation main-nav js-main-nav">
-                {% include nav.html pages=site.pages hierarchy=1%}
-                {% include logos.html %}  
-      </div>
-      <footer class="site-footer">
-      </footer>
-    </div>
     <div class="main-content-wrap js-main-content" tabindex="0">
-      <div class="main-content">
-        <div class="page-header js-page-header">
+      <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-primary">
+        <a class="navbar-brand" href="#">{% include title.html %}</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ site.url }}{{ site.baseurl }}">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ site.url }}{{ site.baseurl }}/about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://otp.uni-weimar.de">Learning</a>
+            </li>
+          </ul>
           {% if site.search_enabled != false %}
-          <div class="search">
-            <div class="search-input-wrap">
-              <input type="text" class="js-search-input search-input" tabindex="0" placeholder="Search {{ site.title }}" aria-label="Search {{ site.title }}" autocomplete="off">
-              <svg width="14" height="14" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="search-icon"><title>Search</title><g fill-rule="nonzero"><path d="M17.332 20.735c-5.537 0-10-4.6-10-10.247 0-5.646 4.463-10.247 10-10.247 5.536 0 10 4.601 10 10.247s-4.464 10.247-10 10.247zm0-4c3.3 0 6-2.783 6-6.247 0-3.463-2.7-6.247-6-6.247s-6 2.784-6 6.247c0 3.464 2.7 6.247 6 6.247z"/><path d="M11.672 13.791L.192 25.271 3.02 28.1 14.5 16.62z"/></g></svg>
-            </div>
+          <div class="form-inline my-2 my-lg-0 search-input-wrap">
+              <input type="text" class="form-control mr-sm-2t js-search-input" tabindex="0" placeholder="Search" aria-label="Search" autocomplete="off">
             <div class="js-search-results search-results-wrap"></div>
           </div>
           {% endif %}
-          {% if site.aux_links != nil %}
-            <ul class="list-style-none text-small aux-nav">
-              {% for link in site.aux_links %}
-                <li class="d-inline-block my-0{% unless forloop.last %} mr-2{% endunless %}"><a href="{{ link.last }}">{{ link.first }}</a></li>
-              {% endfor %}
-            </ul>
-          {% endif %}
         </div>
+      </nav>
+      <div class="row">
+      <div class="col">
+      <nav class="navbar">
+      <a class="navbar-brand" href="#">{{ site.title }}</a>
+      <!--Height Buffer-->
+      </nav>
+      </div>
+      </div>
+        <div class="row">
+      <div class="col">
         <div class="page">
           {% unless page.url == "/" %}
             {% if page.parent %}
@@ -95,10 +101,13 @@ layout: table_wrappers
           {% if site.footer_content != nil %}
             <hr>
             <footer role="contentinfo">
+            {% include logos.html %}  
               <p class="text-small text-grey-dk-000 mb-0">{{ site.footer_content }}</p>
             </footer>
           {% endif %}
 
+        </div>
+        </div>
         </div>
       </div>
     </div>

@@ -35,9 +35,7 @@ search_tokenizer_separator: /[\s/]+/
 heading_anchors: true
 
 # Aux links for the upper right navigation
-aux_links:
-  "Parametric Planning Catalogue on Github":
-    - "//github.com/infar-buw/ips-catalogue"
+github_link: "//github.com/infar-buw/ips-catalogue"
 
 # Footer content appears at the bottom of every page's main content
 footer_content: "Copyright &copy; 2020 DecodingSpaces - ECL-AA - InfAR Bauhaus-Universität Weimar. Distributed by an <a href=\"https://github.com/infar-buw/ips-catalogue/tree/master/LICENSE.txt\">MIT license.</a>"
