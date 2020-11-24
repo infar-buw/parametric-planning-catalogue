@@ -7,9 +7,9 @@ layout: default
 
 <div class="button-group filter-button-group">
     <h3>Filter</h3>
-    <!--<button type="button" class="btn btn-primary btn-sm" data-filter="*">All</button>-->
+    <!--<button type="button" class="btn btn-secondary btn-sm" data-filter="*">All</button>-->
     {% for tag in tags %}
-    <button type="button" class="btn btn-secondary btn-sm" data-filter=".{{ tag | remove:' ' }}">
+    <button type="button" class="btn btn-primary btn-sm" data-filter=".{{ tag | remove:' ' }}">
        {{ tag }}
     </button>
     {% endfor %}
@@ -17,9 +17,9 @@ layout: default
   <!--SORTING
   <div class="button-group sort-by-button-group">
     <h3>Sort</h3>
-    <button type="button" class="btn btn-primary btn-sm" data-sort-by="original-order">Normal</button>
-    <button type="button" class="btn btn-secondary btn-sm" data-sort-by="title">Name</button>
-    <button type="button" class="btn btn-secondary btn-sm" data-sort-by="tag">Tag</button>
+    <button type="button" class="btn btn-secondary btn-sm" data-sort-by="original-order">Normal</button>
+    <button type="button" class="btn btn-primary btn-sm" data-sort-by="title">Name</button>
+    <button type="button" class="btn btn-primary btn-sm" data-sort-by="tag">Tag</button>
     </div>
   </div>
   -->
@@ -55,10 +55,10 @@ layout: default
         $moduleFilter.isotope({ sortBy: sortByValue });
       });
       $('.sort-by-button-group button.btn').on('click', function(){
-          $('.sort-by-button-group button.btn').removeClass('btn-primary');
-          $('.sort-by-button-group button.btn').addClass('btn-secondary');
-          $(this).removeClass('btn-secondary');
-          $(this).addClass('btn-primary');
+          $('.sort-by-button-group button.btn').removeClass('btn-secondary');
+          $('.sort-by-button-group button.btn').addClass('btn-primary');
+          $(this).removeClass('btn-primary');
+          $(this).addClass('btn-secondary');
       });
       /* filtering */
 
@@ -81,12 +81,12 @@ layout: default
         var isChecked = $(this).hasClass('is-checked');
         var filter = $(this).attr('data-filter');
         if ( isChecked ) {
-          $(this).removeClass('btn-secondary');
-          $(this).addClass('btn-primary');
-           addFilter( filter );
-        } else {
           $(this).removeClass('btn-primary');
           $(this).addClass('btn-secondary');
+           addFilter( filter );
+        } else {
+          $(this).removeClass('btn-secondary');
+          $(this).addClass('btn-primary');
           removeFilter( filter );
         }
         /*filter isotope*/
