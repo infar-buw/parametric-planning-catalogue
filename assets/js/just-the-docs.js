@@ -27,7 +27,7 @@ function initNav() {
   const mainNav = document.querySelector('.js-main-nav');
   const pageHeader = document.querySelector('.js-page-header');
   const navTrigger = document.querySelector('.js-main-nav-trigger');
-
+  if(mainNav !== null){
   jtd.addEvent(navTrigger, 'click', function(e){
     e.preventDefault();
     var text = navTrigger.innerText;
@@ -41,10 +41,13 @@ function initNav() {
     textToggle = text;
   })
 }
+}
 
 // Site search
 
 function initSearch() {
+  var searchElement = document.querySelector('.js-search-results');
+  if(searchElement !== null){
   var request = new XMLHttpRequest();
   request.open('GET', '{{ "assets/js/search-data.json" | absolute_url }}', true);
 
@@ -174,8 +177,7 @@ function initSearch() {
           wildcard: lunr.Query.wildcard.TRAILING
         });
       });
-
-      if (results.length > 0) {
+      if (results.length > 0 && input.length > 1) {
         searchResults.classList.add('active');
         var resultsList = document.createElement('ul');
         resultsList.classList.add('search-results-list');
@@ -277,6 +279,7 @@ function initSearch() {
       setTimeout(function(){ hideResults() }, 300);
     });
   }
+}
 }
 
 function pageFocus() {

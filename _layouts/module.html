@@ -7,24 +7,46 @@ layout: default
         <h1>{{ page.title }}</h1>
     </div>
     <div class="col-12">
-    <div class="col-12 col-sm-8 col-md-6 float-right p-5">
-        {% if page.image %}
-            <img src="{{ page.url | absolute_url }}{{ page.image }}" class="img-fluid" />
-        {% endif %}
-    </div>
-    {% if page.file %}  
-    <div class="w-100 text-center p-5">
+        <div class="col-12 col-sm-8 col-md-6 float-right p-5">
+            {% if page.image %}
+                <img src="{{ page.url | absolute_url }}{{ page.image }}" class="img-fluid" />
+            {% endif %}
+        </div>
+        {% if page.file %}  
+        <div class="w-100 text-center p-5">
             <a href="{{ page.url | absolute_url }}{{page.file}}">
                 <button type="button" name="button" class="btn btn-lg btn-primary">Download</button>
             </a>
         </div>
-    {% endif %}
-    {% if page.content %}
-    <h2>Description</h2>
-    {{ content }}
-    {% endif %}
+        {% endif %}
+        {% if page.content %}
+        <h2>Description</h2>
+        {{ content }}
+        {% endif %}
     </div>
+    {% if page.video%}
+    <div class="col-12">
+        {% if page.video contains "vimeo"%}
+            {% assign video-id = page.video | split: "/" | last | split: "?" | first %}
+            <div style="padding:56.25% 0 0 0;position:relative;">
+                <iframe src="https://player.vimeo.com/video/{{video-id}}?portrait=0" 
+                style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div><script src="https://player.vimeo.com/api/player.js"></script>
+            </br>
+
+            {% else if page.video contains "youtube" %}
+            {% assign video-id = page.video | split: "v=" | last | split: "&" | first %}
+            <div style="padding:56.25% 0 0 0;position:relative;">
+                <iframe src="https://www.youtube-nocookie.com/embed/{{video-id}}" 
+                style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+            </div>
+            </br>
+        {% endif %}
     </div>
+    {% endif %}
 </div>
 
 

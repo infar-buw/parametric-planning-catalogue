@@ -17,15 +17,16 @@ layout: table_wrappers
 
   <div class="page-wrap">
     <div class="main-content-wrap js-main-content" tabindex="0">
-      <div class="container">
-      <nav class="navbar navbar-expand-lg fixed-top bg-white text-primary">
-        <a class="navbar-brand" href="#">{% include title.html %}</a>
+      
+      <nav class="navbar navbar-expand-lg bg-white text-primary">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto text-uppercase">
+          <div class="justify-content-between container">
+          <a class="navbar-brand text-petitecaps" href="#">{% include title.html %}</a>
+          <ul class="navbar-nav ml-auto text-uppercase">
             <li class="nav-item active">
               <a class="nav-link" href="{{ site.url }}{{ site.baseurl }}">Home <span class="sr-only">(current)</span></a>
             </li>
@@ -36,25 +37,13 @@ layout: table_wrappers
               <a class="nav-link" href="https://otp.uni-weimar.de">Learning</a>
             </li>
           </ul>
-          {% if site.search_enabled != false %}
-          <div class="form-inline my-2 my-lg-0 search-input-wrap">
-              <input type="text" class="form-control mr-sm-2t js-search-input" tabindex="0" placeholder="Search" aria-label="Search" autocomplete="off">
-            <div class="js-search-results search-results-wrap"></div>
-          </div>
-          {% endif %}
+        </div>
         </div>
       </nav>
+    <div class="container">
       <div class="row">
       <div class="col">
-      <nav class="navbar">
-      <a class="navbar-brand" href="#">{{ site.title }}</a>
-      <!--Height Buffer-->
-      </nav>
-      </div>
-      </div>
-        <div class="row">
-      <div class="col">
-        <div class="page">
+
           {% unless page.url == "/" %}
             {% if page.parent %}
               <nav class="breadcrumb-nav">
@@ -109,7 +98,7 @@ layout: table_wrappers
         </div>
         </div>
         </div>
-      </div>
+      
     </div>
   </div>
 </body>

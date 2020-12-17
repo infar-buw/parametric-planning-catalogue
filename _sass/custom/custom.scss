@@ -55,8 +55,8 @@
 $primary: #00b0f0 !default;
 $secondary: #0274be !default;
 $secondary-light: #0274be22;
-$enable-shadows: true !default;
-$enable-gradients: true !default;
+$enable-shadows: false !default;
+$enable-gradients: false !default;
 
 
 
@@ -160,7 +160,9 @@ $nav-width: 300px;
     background-image:none;
 }
 .logos a > img:hover {
-    background-color: $primary;
-    background-size: 100% 100%;
-    background-position: 0 0;
+    
+}
+
+.text-petitecaps{
+    font-variant-caps: petite-caps;
 }
