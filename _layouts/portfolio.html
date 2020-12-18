@@ -7,7 +7,7 @@ layout: default
 <div class="row">
   <div class="col-8">
     <div class="button-group filter-button-group">
-        <span class="text-small text-grey-dk-100">Filter by categories</span>
+        <span class="text-small text-grey-dk-100">Filter by tag</span>
         <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="search-icon"><title>Filter</title><path d="M2.75 6a.75.75 0 000 1.5h18.5a.75.75 0 000-1.5H2.75zM6 11.75a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H6.75a.75.75 0 01-.75-.75zm4 4.938a.75.75 0 01.75-.75h2.5a.75.75 0 010 1.5h-2.5a.75.75 0 01-.75-.75z"></path></svg> 
         {% for tag in tags %}
         <button type="button" class="btn btn-outline-primary btn-sm" data-filter=".{{ tag | remove:' ' }}">

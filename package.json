@@ -1,10 +1,10 @@
 {
-  "name": "just-the-docs",
-  "version": "0.2.7",
-  "description": "A modern Jekyll theme for documentation",
-  "repository": "pmarsceill/just-the-docs",
+  "name": "parametric-planning-catalogue",
+  "version": "0.0.1",
+  "description": "A parametric planning catalogue containing modules for urban planning.",
+  "repository": "infar-buw/parametric-planning-catalogue",
   "license": "MIT",
-  "bugs": "https://github.com/pmarsceill/just-the-docs/issues",
+  "bugs": "https://github.com/infar-buw/parametric-planning-catalogue/issues",
   "devDependencies": {
     "stylelint": "^10.0.1",
     "stylelint-config-primer": "^8.0.0",

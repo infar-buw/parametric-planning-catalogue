@@ -1,67 +1,57 @@
-<p align="right">
-    <a href="https://badge.fury.io/rb/just-the-docs"><img src="https://badge.fury.io/rb/just-the-docs.svg" alt="Gem version"></a> <a href="https://github.com/pmarsceill/just-the-docs/actions"><img src="https://github.com/pmarsceill/just-the-docs/workflows/CI/badge.svg" alt="Build status"></a>
-</p>
-<br><br>
 <p align="center">
-    <h1 align="center">Just the Docs</h1>
-    <p align="center">A modern, highly customizable, and responsive Jekyll theme for documentation with built-in search.<br>Easily hosted on GitHub Pages with few dependencies.</p>
-    <p align="center"><strong><a href="https://pmarsceill.github.io/just-the-docs/">See it in action!</a></strong></p>
+    <h1 align="center">Parametric Planning Catalogue</h1>
+    <p align="center"><strong><a href="https://infar-buw.github.io/parametric-planning-catalogue/">See it in action!</a></strong></p>
     <br><br><br>
 </p>
 
-![jtd](https://user-images.githubusercontent.com/896475/47384541-89053c80-d6d5-11e8-98dc-dba16e192de9.gif)
+## Installation of local development environment
 
-## Installation
+The project is based on [Just the docs](https://pmarsceill.github.io/just-the-docs/). It can be hosted via Github Pages. For [local development](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/testing-your-github-pages-site-locally-with-jekyll) Ruby needs to be installed. If you do not have Ruby DevKit installed, install it (with ridk). Get installation files from: [rubyinstaller-devkit](https://rubyinstaller.org/downloads/)
 
-Add this line to your Jekyll site's Gemfile:
+Afterwards open CMD and install jekyll bundler:
+`gem install jekyll bundler`
 
-```ruby
-gem "just-the-docs"
+Now create a project folder and clone the repository from [https://github.com/infar-buw/parametric-planning-catalogue.git](https://github.com/infar-buw/parametric-planning-catalogue.git).
+If you need help with cloning a repository refer to [Git Documentation](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository) and choose an IDE such as [Visual Studio Code](https://code.visualstudio.com/docs/editor/versioncontrol). VSCode will also allow you to use the CMD terminal directly within your project folder via View->New Terminal.
+
+You should see now the files of the repository within your project folder. Within CMD Terminal we now need to install and run bundler:
+```
+gem install bundler --version '2.0.1'
+bundler
 ```
 
-And add this line to your Jekyll site's `_config.yml`:
+If you want to see the website, you have to use the following CMD command:
 
-```yaml
-theme: just-the-docs
+`bundler exec jekyll serve`
+
+It will create the website in the same way Github Pages would do within the hidden `_site` folder and it will directly give you access to it via localhost:4000/parametric-planning-catalogue/
+
+## Adding new modules
+
+Modules of the catalogue are placed within the `docs` folder. Each module has its own folder. The name of the folder will serve as a subdomain. Since we try to keep the Grasshopper files in a clean format, we provide an example file within the `template` folder. If you want to contribute a new module, you can copy the `template` folder into docs and give it a new CamelCase-formatted name. You can open and edit the Grasshopper file according to your needs.
+Within the folder you can furthermore place an image or also a .zip of your Grasshopper script, if you need additional files such as a Rhino .3dm file. Please provide a picture in squared format (800x800px). We try to use animated pictures for dynamic processes. They can be easily produced as gifs via [ScreenToGif](https://www.screentogif.com/).
+
+Within the `index.md` you can now assign these files within the header. As well as title, [markdown-text](https://www.markdownguide.org/basic-syntax/) and tags. The tags are used for filtering on the main page. Please try to use those, that already exist and fit your module. If we will merge your file, we will either way see how it fits into our structure (see next section Contribution).
+```
+---
+layout: module #do not change this
+tags: [Building, Parcel] #insert tags for filtering
+title: Title of the module
+image: IMAGENAME.gif
+file: FILENAME.gh|zip
+video: https://vimeo.com/xxx #vimeo or youtube link
+---
+
+Text in markdown format
 ```
 
-And then execute:
+### Contributing
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install just-the-docs
-
-## Usage
-
-[View the documentation](https://pmarsceill.github.io/just-the-docs/) for usage information.
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/pmarsceill/just-the-docs. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-### Submitting code changes:
-
-- Open a [Pull Request](https://github.com/pmarsceill/just-the-docs/pulls)
+If you feel you want to contribute your new module, create a pull request and we discuss its implementation:
+- Open a [Pull Request](https://github.com/infar-buw/parametric-planning-catalogue/pulls)
 - Ensure all CI tests pass
 - Await code review
-- Bump the version number in `just-the-docs.gemspec` and `package.json` according to [semantic versioning](https://semver.org/).
-
-### Design and development principles of this theme:
-
-1. As few dependencies as possible
-2. No build script needed
-3. First class mobile experience
-4. Make the content shine
-
-## Development
-
-To set up your environment to develop this theme, run `bundle install`.
-
-Your theme is set up just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When the theme is released, only the files in `_layouts`, `_includes`, and `_sass` tracked with Git will be released.
+- Bump the version number in `parametric-planning-catalogue.gemspec` and `package.json` according to [semantic versioning](https://semver.org/).
 
 ## License
 
