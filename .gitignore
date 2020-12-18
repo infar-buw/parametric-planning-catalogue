@@ -6,3 +6,5 @@ Gemfile.lock
 node_modules
 .install
 .vscode
+*.code-workspace
+package-lock.json
