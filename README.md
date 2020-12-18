@@ -16,7 +16,7 @@ If you need help with cloning a repository refer to [Git Documentation](https://
 
 You should see now the files of the repository within your project folder. Within CMD Terminal we now need to install and run bundler:
 ```
-gem install bundler --version '2.0.1'
+gem install bundler --version '2.1.4'
 bundler
 ```
 
@@ -24,7 +24,7 @@ If you want to see the website, you have to use the following CMD command:
 
 `bundler exec jekyll serve`
 
-It will create the website in the same way Github Pages would do within the hidden `_site` folder and it will directly give you access to it via localhost:4000/parametric-planning-catalogue/
+It will create the website in the same way Github Pages would do within the hidden `_site` folder and it will directly give you access to it via [localhost:4000/parametric-planning-catalogue/](localhost:4000/parametric-planning-catalogue/)
 
 ## Adding new modules
 
