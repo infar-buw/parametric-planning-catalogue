@@ -28,8 +28,8 @@ It will create the website in the same way Github Pages would do within the hidd
 
 ## Adding new modules
 
-Modules of the catalogue are placed within the `docs` folder. Each module has its own folder. The name of the folder will serve as a subdomain. Since we try to keep the Grasshopper files in a clean format, we provide an example file within the `template` folder. If you want to contribute a new module, you can copy the `template` folder into docs and give it a new CamelCase-formatted name. You can open and edit the Grasshopper file according to your needs.
-Within the folder you can furthermore place an image or also a .zip of your Grasshopper script, if you need additional files such as a Rhino .3dm file. Please provide a picture in squared format (800x800px). We try to use animated pictures for dynamic processes. They can be easily produced as gifs via [ScreenToGif](https://www.screentogif.com/).
+Modules of the catalogue are placed within the `docs` folder. Each module has its own folder. The name of the folder will serve as a subdomain. Since we try to keep the Grasshopper files in a clean format, we provide an example file. It is together will all other necessary files within the `template` folder. If you want to contribute a new module, you can copy the `CopyThisTemplateFolder` folder into docs and give it a new CamelCase-formatted name. You can open and edit the Grasshopper file according to your needs.
+Within the folder you can furthermore place an image or also a .zip of your Grasshopper script, if you need additional files such as a Rhino .3dm file. Please provide a picture in squared format (~800x800px). We try to use animated pictures for dynamic processes. They can be easily produced as gifs via [ScreenToGif](https://www.screentogif.com/). Within the `template` folder are furthermore two Rhino files that can serve as templates for i.e. city or neighbourhood level. Both have a saved view and a layer with a rectangle that can help to define the recording area of ScreenToGif.
 
 Within the `index.md` you can now assign these files within the header. As well as title, [markdown-text](https://www.markdownguide.org/basic-syntax/) and tags. The tags are used for filtering on the main page. Please try to use those, that already exist and fit your module. If we will merge your file, we will either way see how it fits into our structure (see next section Contribution).
 ```
@@ -52,6 +52,8 @@ If you feel you want to contribute your new module, create a pull request and we
 - Ensure all CI tests pass
 - Await code review
 - Bump the version number in `parametric-planning-catalogue.gemspec` and `package.json` according to [semantic versioning](https://semver.org/).
+
+We are looking forward to your contribution!
 
 ## License
 
