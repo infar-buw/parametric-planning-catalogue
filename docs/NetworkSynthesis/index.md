@@ -4,6 +4,7 @@ tags: [Street]
 title: Street Network Synthesis
 image: NetworkSynthesis.gif
 file: NetworkSynthesis.gh
+video: https://vimeo.com/432821653
 
 ---
 
