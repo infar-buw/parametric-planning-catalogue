@@ -20,9 +20,13 @@ gem install bundler --version '2.1.4'
 bundler
 ```
 
-If you want to see the website, you have to use the following CMD command:
+### Running local development
 
-`bundler exec jekyll serve`
+After you have installed and setup your project you can start running the local website by using the following command:
+
+```
+bundler exec jekyll serve
+```
 
 It will create the website in the same way Github Pages would do within the hidden `_site` folder and it will directly give you access to it via [localhost:4000/parametric-planning-catalogue/](localhost:4000/parametric-planning-catalogue/)
 
