@@ -55,6 +55,7 @@
 $primary: #00b0f0 !default;
 $secondary: #0274be !default;
 $secondary-light: #0274be22;
+$black: #000;
 $enable-shadows: false !default;
 $enable-gradients: false !default;
 
@@ -67,7 +68,7 @@ $sidebar-color: $secondary-light;//$grey-lt-000;
 //$code-background-color: $grey-lt-000;
 
 //$body-text-color: $grey-dk-100;
-$body-heading-color: $secondary;//$grey-dk-300;
+$body-heading-color: $black;//$grey-dk-300;
 //$search-result-preview-color: $grey-dk-000;
 $nav-child-link-color: $secondary;// $grey-dk-100;
 $link-color: $primary;

@@ -49,6 +49,10 @@ video: https://vimeo.com/xxx #vimeo or youtube link
 Text in markdown format
 ```
 
+### Changing Layout
+
+Within [_layout](https://jekyllrb.com/docs/layouts/) and [_includes](https://jekyllrb.com/docs/includes/) folders are files that define the template of the site. They include normal html that is styled via [Bootstrap](https://getbootstrap.com/) css-classes and is mixed with a templating syntax based on Jekyll [variables](https://jekyllrb.com/docs/variables/) and [Liquid](https://jekyllrb.com/docs/liquid/).
+
 ### Contributing
 
 If you feel you want to contribute your new module, create a pull request and we discuss its implementation:

@@ -18,14 +18,14 @@ layout: table_wrappers
   <div class="page-wrap">
     <div class="main-content-wrap js-main-content" tabindex="0">
       
-      <nav class="navbar navbar-expand-lg bg-white text-primary">
+      <nav class="navbar navbar-expand-lg bg-white text-primary sticky-top" >
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <div class="justify-content-between container">
-          <a class="navbar-brand text-petitecaps" href="#">{% include title.html %}</a>
+          <a class="navbar-brand text-petitecaps" href="{{site.url}}{{site.baseurl}}">{% include title.html %}</a>
           <ul class="navbar-nav ml-auto text-uppercase">
             <li class="nav-item active">
               <a class="nav-link" href="{{ site.url }}{{ site.baseurl }}">Home <span class="sr-only">(current)</span></a>
@@ -33,6 +33,12 @@ layout: table_wrappers
             <li class="nav-item">
               <a class="nav-link" href="{{ site.url }}{{ site.baseurl }}/about">About</a>
             </li>
+            <!-- Add more links to navbar - make sure the file exists in correct folder:
+              i.e. howto.md needs to be placed in root folder, when path is ... site.baseurl }}/howto
+              or if howto.md lays in folder page, then it needs to be ... site.baseurl }}/page/howto
+            <li class="nav-item">
+              <a class="nav-link" href="{{ site.url }}{{ site.baseurl }}/howto/1">Howto</a>
+            </li>-->
             <li class="nav-item">
               <a class="nav-link" href="https://otp.uni-weimar.de">Learning</a>
             </li>

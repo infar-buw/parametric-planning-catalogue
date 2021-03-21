@@ -3,8 +3,16 @@ layout: default
 ---
 {% assign layout_type = 'module' %}
 {% assign child_modules = site.pages | where_exp: "item", "item.url contains page.url" | where_exp: "item", "item.layout contains layout_type"%}
-{% assign tags = child_modules | map: "tags" | uniq | compact %}
-<div class="row">
+<!-- Get tags from children:
+  uniq -> no duplicates
+  compact -> avoid having two tags i.e. for "Land Use", but make it one tag
+  sort_natural -> alphabetic order
+-->
+{% assign tags = child_modules | map: "tags" | uniq | compact | sort_natural %}
+<!-- sticky-top: makes tag bar stick to top of browser window
+   top:3rem positions it just below navbar, otherwise they would overlap-->
+<div class="container sticky-top bg-white" style="top:3rem;">
+  <div class="row py-4">
   <div class="col-8">
     <div class="button-group filter-button-group">
         <span class="text-small text-grey-dk-100">Filter by tag</span>
@@ -15,6 +23,7 @@ layout: default
         </button>
         {% endfor %}
     </div>
+
     <!--SORTING
     <div class="button-group sort-by-button-group">
       <h3>Sort</h3>
@@ -39,6 +48,7 @@ layout: default
     
     </div>
   </div>
+</div>
   <div class="row">
     <div class="col-12">
       <div class="module-filter mx-auto">

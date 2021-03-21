@@ -8,3 +8,5 @@ file: IsovistOnPath.gh
 ---
 
 This module analyses visibility through 2D Isovist along a predefined path in consideration of range and viewing angle.
+
+![Isovist Statistics](IsovistStats.png)
