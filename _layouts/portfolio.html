@@ -14,14 +14,18 @@ layout: default
 <div class="container sticky-top bg-white" style="top:3rem;">
   <div class="row py-4">
   <div class="col-8">
-    <div class="button-group filter-button-group">
-        <span class="text-small text-grey-dk-100">Filter by tag</span>
+    <div class="button-group filter-button-group d-flex">
+       <div class="flex-fill">
+        <span class="text-small text-grey-dk-100 d-none d-md-inline-block">Filter by tag</span>
         <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="search-icon"><title>Filter</title><path d="M2.75 6a.75.75 0 000 1.5h18.5a.75.75 0 000-1.5H2.75zM6 11.75a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H6.75a.75.75 0 01-.75-.75zm4 4.938a.75.75 0 01.75-.75h2.5a.75.75 0 010 1.5h-2.5a.75.75 0 01-.75-.75z"></path></svg> 
+      </div>
+      <div class="flex-fill">
         {% for tag in tags %}
         <button type="button" class="btn btn-outline-primary btn-sm" data-filter=".{{ tag | remove:' ' }}">
           {{ tag }}
         </button>
         {% endfor %}
+      </div>
     </div>
 
     <!--SORTING
@@ -38,8 +42,7 @@ layout: default
     {% if site.search_enabled != false %}
     <div class="search">
           <div class="search-input-wrap form-inline justify-content-end">
-            <input type="text" class="js-search-input search-input form-control form-control-sm" tabindex="0" placeholder="Search" aria-label="Search" autocomplete="off">
-            <svg width="14" height="14" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="search-icon"><title>Search</title><g fill-rule="nonzero"><path d="M17.332 20.735c-5.537 0-10-4.6-10-10.247 0-5.646 4.463-10.247 10-10.247 5.536 0 10 4.601 10 10.247s-4.464 10.247-10 10.247zm0-4c3.3 0 6-2.783 6-6.247 0-3.463-2.7-6.247-6-6.247s-6 2.784-6 6.247c0 3.464 2.7 6.247 6 6.247z"/><path d="M11.672 13.791L.192 25.271 3.02 28.1 14.5 16.62z"/></g></svg>
+            <input type="text" class="js-search-input search-input form-control w-100" tabindex="0" placeholder="Search" aria-label="Search" autocomplete="off">
           </div>
         <div class="js-search-results search-results-wrap"></div>
       </div>
